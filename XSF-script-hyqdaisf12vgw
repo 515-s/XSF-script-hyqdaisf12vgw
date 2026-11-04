@@ -4,14 +4,14 @@
 -- This script has been obfuscated for distribution.
 --
 
-local _dyepeTable = {["A"] = 0, ["B"] = 1, ["C"] = 2, ["D"] = 3, ["E"] = 4, ["F"] = 5, ["G"] = 6, ["H"] = 7, ["I"] = 8, ["J"] = 9, ["K"] = 10, ["L"] = 11, ["M"] = 12, ["N"] = 13, ["O"] = 14, ["P"] = 15, ["Q"] = 16, ["R"] = 17, ["S"] = 18, ["T"] = 19, ["U"] = 20, ["V"] = 21, ["W"] = 22, ["X"] = 23, ["Y"] = 24, ["Z"] = 25, ["a"] = 26, ["b"] = 27, ["c"] = 28, ["d"] = 29, ["e"] = 30, ["f"] = 31, ["g"] = 32, ["h"] = 33, ["i"] = 34, ["j"] = 35, ["k"] = 36, ["l"] = 37, ["m"] = 38, ["n"] = 39, ["o"] = 40, ["p"] = 41, ["q"] = 42, ["r"] = 43, ["s"] = 44, ["t"] = 45, ["u"] = 46, ["v"] = 47, ["w"] = 48, ["x"] = 49, ["y"] = 50, ["z"] = 51, ["0"] = 52, ["1"] = 53, ["2"] = 54, ["3"] = 55, ["4"] = 56, ["5"] = 57, ["6"] = 58, ["7"] = 59, ["8"] = 60, ["9"] = 61, ["+"] = 62, ["/"] = 63}
-local function _dyepe(s)
+local _dwrnzTable = {["A"] = 0, ["B"] = 1, ["C"] = 2, ["D"] = 3, ["E"] = 4, ["F"] = 5, ["G"] = 6, ["H"] = 7, ["I"] = 8, ["J"] = 9, ["K"] = 10, ["L"] = 11, ["M"] = 12, ["N"] = 13, ["O"] = 14, ["P"] = 15, ["Q"] = 16, ["R"] = 17, ["S"] = 18, ["T"] = 19, ["U"] = 20, ["V"] = 21, ["W"] = 22, ["X"] = 23, ["Y"] = 24, ["Z"] = 25, ["a"] = 26, ["b"] = 27, ["c"] = 28, ["d"] = 29, ["e"] = 30, ["f"] = 31, ["g"] = 32, ["h"] = 33, ["i"] = 34, ["j"] = 35, ["k"] = 36, ["l"] = 37, ["m"] = 38, ["n"] = 39, ["o"] = 40, ["p"] = 41, ["q"] = 42, ["r"] = 43, ["s"] = 44, ["t"] = 45, ["u"] = 46, ["v"] = 47, ["w"] = 48, ["x"] = 49, ["y"] = 50, ["z"] = 51, ["0"] = 52, ["1"] = 53, ["2"] = 54, ["3"] = 55, ["4"] = 56, ["5"] = 57, ["6"] = 58, ["7"] = 59, ["8"] = 60, ["9"] = 61, ["+"] = 62, ["/"] = 63}
+local function _dwrnz(s)
     local bytes = {}
     local buffer, bits = 0, 0
     for i = 1, #s do
         local ch = s:sub(i, i)
         if ch == "=" then break end
-        local val = _dyepeTable[ch]
+        local val = _dwrnzTable[ch]
         if val ~= nil then
             buffer = bit32.bor(bit32.lshift(buffer, 6), val)
             bits = bits + 6
@@ -21,7 +21,7 @@ local function _dyepe(s)
             end
         end
     end
-    local key = "cijktsyyhjkm"
+    local key = "iizvxmluznqa"
     local out = {}
     for i = 1, #bytes do
         local k = key:byte(((i - 1) % #key) + 1)
@@ -30,37 +30,37 @@ local function _dyepe(s)
     return table.concat(out)
 end
 
-if _G.xk_active and type(_G.xk_active.kill) == _dyepe("BRwECAAaFhc=") then
+if _G.xk_active and type(_G.xk_active.kill) == _dwrnz("DxwUFQwEAxs=") then
     pcall(_G.xk_active.kill)
-elseif _G.xk_active and type(_G.xk_active.stop) == _dyepe("BRwECAAaFhc=") then
+elseif _G.xk_active and type(_G.xk_active.stop) == _dwrnz("DxwUFQwEAxs=") then
     pcall(_G.xk_active.stop)
 end
 _G.xk_active = nil 
 
-local Players = game:GetService(_dyepe("MwULEhEBCg=="))
-local RunService = game:GetService(_dyepe("MRwEOBEBDxALDw=="))
-local RS = game:GetService(_dyepe("MQwaBx0QGA0NDjgZDBsLDBE="))
-local Workspace = game:GetService(_dyepe("NAYYAAcDGBoN"))
-local UIS = game:GetService(_dyepe("NhoPGT0dCQwcOQ4fFQAJDg=="))
-local CoreGui = game:GetService(_dyepe("IAYYDjMGEA=="))
-local HttpService = game:GetService(_dyepe("Kx0eGycWCw8BCQ4="))
-local StarterGui = game:GetService(_dyepe("MB0LGQAWCz4dAw=="))
-local Lighting = game:GetService(_dyepe("LwANAwAaFx4="))
+local Players = game:GetService(_dwrnz("OQUbDx0fHw=="))
+local RunService = game:GetService(_dwrnz("OxwUJR0fGhwZCw=="))
+local RS = game:GetService(_dwrnz("OwwKGhEODQEfCiIVBhsbER0="))
+local Workspace = game:GetService(_dwrnz("PgYIHQsdDRYf"))
+local UIS = game:GetService(_dwrnz("PBofBDEDHAAOPRQTHwAZEw=="))
+local CoreGui = game:GetService(_dwrnz("KgYIEz8YBQ=="))
+local HttpService = game:GetService(_dwrnz("IR0OBisIHgMTDRQ="))
+local StarterGui = game:GetService(_dwrnz("Oh0bBAwIHjIPBw=="))
+local Lighting = game:GetService(_dwrnz("JQAdHgwEAhI="))
 
 local player = Players.LocalPlayer
 if not player then return end
 
 
 local THEME = {
-    BG = Color3.fromRGB(0, 0, 0), BG_TOP = Color3.fromRGB((13 - 5), (26 - 10), (19 - 9)),
-    GREEN = Color3.fromRGB(0, (468 - 213), (133 - 43)), GREEN_DIM = Color3.fromRGB(0, (230 - 70), (69 - 9)),
-    GREEN_SOFT = Color3.fromRGB((161 - 41), (306 - 86), (156 - 16)), TEXT_OFF = Color3.fromRGB((181 - 31), (281 - 131), (171 - 21)),
-    DISCORD_BG = Color3.fromRGB((90 - 2), (114 - 13), (411 - 169)), DISCORD_ST = Color3.fromRGB((171 - 41), (284 - 139), (390 - 135)),
-    GOLD = Color3.fromRGB((505 - 250), (364 - 149), 0), RED = Color3.fromRGB((281 - 26), (73 - 13), (98 - 38)),
-    GRAY = Color3.fromRGB((206 - 46), (180 - 20), (187 - 27)), BLUE = Color3.fromRGB(0, (265 - 105), (305 - 50)),
-    PURPLE = Color3.fromRGB((192 - 32), 0, (379 - 124)), PURE_BLACK = Color3.fromRGB(0, 0, 0),
-    WHITE = Color3.fromRGB((492 - 237), (433 - 178), (506 - 251)), DARK_TEXT = Color3.fromRGB((23 - 3), (35 - 15), (24 - 4)),
-    NOTIF_GRAY = Color3.fromRGB((228 - 38), (297 - 107), (196 - 6)), CYAN = Color3.fromRGB(0, (318 - 98), (358 - 138)),
+    BG = Color3.fromRGB(0, 0, 0), BG_TOP = Color3.fromRGB((10 - 2), (21 - 5), (20 - 10)),
+    GREEN = Color3.fromRGB(0, (311 - 56), (164 - 74)), GREEN_DIM = Color3.fromRGB(0, (185 - 25), (91 - 31)),
+    GREEN_SOFT = Color3.fromRGB((137 - 17), (289 - 69), (205 - 65)), TEXT_OFF = Color3.fromRGB((156 - 6), (273 - 123), (279 - 129)),
+    DISCORD_BG = Color3.fromRGB((172 - 84), (130 - 29), (302 - 60)), DISCORD_ST = Color3.fromRGB((199 - 69), (271 - 126), (317 - 62)),
+    GOLD = Color3.fromRGB((440 - 185), (263 - 48), 0), RED = Color3.fromRGB((492 - 237), (103 - 43), (62 - 2)),
+    GRAY = Color3.fromRGB((255 - 95), (179 - 19), (286 - 126)), BLUE = Color3.fromRGB(0, (268 - 108), (319 - 64)),
+    PURPLE = Color3.fromRGB((211 - 51), 0, (332 - 77)), PURE_BLACK = Color3.fromRGB(0, 0, 0),
+    WHITE = Color3.fromRGB((422 - 167), (433 - 178), (472 - 217)), DARK_TEXT = Color3.fromRGB((33 - 13), (28 - 8), (22 - 2)),
+    NOTIF_GRAY = Color3.fromRGB((308 - 118), (217 - 27), (254 - 64)), CYAN = Color3.fromRGB(0, (440 - 220), (356 - 136)),
 }
 
 
@@ -69,45 +69,45 @@ _G.xsf_warning_shown = false
 
 local WHITELIST = {
     
-    [11283308063] = _dyepe("UVlYU1lCSVRaU0tfUFNfUk5GQA=="), 
-    [11020293334] = _dyepe("UVlYU1lCSVRaU0tfUFNfUk5GQA=="), 
-    [3075126219]  = _dyepe("UVlYU1lCSVRaU0tfUFNfUk5GQA=="), 
+    [11283308063] = _dwrnz("W1lITlVcXFhIV1FTWlNPT0JYVQ=="), 
+    [11020293334] = _dwrnz("W1lITlVcXFhIV1FTWlNPT0JYVQ=="), 
+    [3075126219]  = _dwrnz("W1lITlVcXFhIV1FTWlNPT0JYVQ=="), 
 
     
-    [10618211780] = _dyepe("UVlYXVlCSFRYXUtfUFNfUk5GQA=="), 
+    [10618211780] = _dwrnz("W1lIQFVcXVhKWVFTWlNPT0JYVQ=="), 
 
     
-    [5538582496]  = _dyepe("UVlYXVlCSFRYXEtfUFNfUk5GQA=="), 
-    [5634662643]  = _dyepe("UVlYXVlCSFRYXEtfUFNfUk5GQA=="), 
-    [8813161587]  = _dyepe("UVlYXVlCSFRYXEtfUFNfUk5GQA=="), 
-    [1407360621]  = _dyepe("UVlYXVlCSFRYXEtfUFNfUk5GQA=="), 
-    [11166685635] = _dyepe("UVlYXVlCSFRYXEtfUFNfUk5GQA=="), 
+    [5538582496]  = _dwrnz("W1lIQFVcXVhKWFFTWlNPT0JYVQ=="), 
+    [5634662643]  = _dwrnz("W1lIQFVcXVhKWFFTWlNPT0JYVQ=="), 
+    [8813161587]  = _dwrnz("W1lIQFVcXVhKWFFTWlNPT0JYVQ=="), 
+    [1407360621]  = _dwrnz("W1lIQFVcXVhKWFFTWlNPT0JYVQ=="), 
+    [11166685635] = _dwrnz("W1lIQFVcXVhKWFFTWlNPT0JYVQ=="), 
 
     
-    [11854617779] = _dyepe("UVlYXVlCSFRYXktfUFNfUk5GQA=="), 
-    [10025842820] = _dyepe("UVlYXVlCSFRYXktfUFNfUk5GQA=="), 
-    [9899485872]  = _dyepe("UVlYXVlCSFRYXktfUFNfUk5GQA=="), 
+    [11854617779] = _dwrnz("W1lIQFVcXVhKWlFTWlNPT0JYVQ=="), 
+    [10025842820] = _dwrnz("W1lIQFVcXVhKWlFTWlNPT0JYVQ=="), 
+    [9899485872]  = _dwrnz("W1lIQFVcXVhKWlFTWlNPT0JYVQ=="), 
 
     
-    [11131297577] = _dyepe("UVlYXVlCSFRYWUtfUFNfUk5GQA=="), 
-    [11845121320] = _dyepe("UVlYXVlCSFRYWUtfUFNfUk5GQA=="), 
-    [7290831509]  = _dyepe("UVlYXVlCSFRYXUtfUFNfUk5GQA=="), 
-    [5121997596]  = _dyepe("UVlYXVlCSFRYWUtfUFNfUk5GQA=="), 
-    [3874554485]  = _dyepe("UVlYXVlCSFRYWUtfUFNfUk5GQA=="), 
+    [11131297577] = _dwrnz("W1lIQFVcXVhKXVFTWlNPT0JYVQ=="), 
+    [11845121320] = _dwrnz("W1lIQFVcXVhKXVFTWlNPT0JYVQ=="), 
+    [7290831509]  = _dwrnz("W1lIQFVcXVhKV1FTWlNPT0JYVQ=="), 
+    [5121997596]  = _dwrnz("W1lIQFVcXVhKXVFTWlNPT0JYVQ=="), 
+    [3874554485]  = _dwrnz("W1lIQFVcXVhKXVFTWlNPT0JYVQ=="), 
 
     
-    [11024147294] = _dyepe("UVlYXVlCSFRYWEtfUFNfUk5GQA=="), 
-    [(420125654 - 65)]   = _dyepe("UVlYXVlCSFRYWEtfUFNfUk5GQA=="), 
-    [5164409260]  = _dyepe("UVlYXVlCSFRYWEtfUFNfUk5GQA=="), 
-    [5113489701]  = _dyepe("UVlYXVlCSFRYWEtfUFNfUk5GQA=="), 
+    [11024147294] = _dwrnz("W1lIQFVcXVhKXFFTWlNPT0JYVQ=="), 
+    [(420125634 - 45)]   = _dwrnz("W1lIQFVcXVhKXFFTWlNPT0JYVQ=="), 
+    [5164409260]  = _dwrnz("W1lIQFVcXVhKXFFTWlNPT0JYVQ=="), 
+    [5113489701]  = _dwrnz("W1lIQFVcXVhKXFFTWlNPT0JYVQ=="), 
 
     
-    [2827554288]  = _dyepe("UVlYXVlCSFRYW0tdVVNYXE5DSQ=="), 
-    [10671869186] = _dyepe("UVlYXVlCSFRYW0tcUVNYXE5DSQ=="), 
+    [2827554288]  = _dwrnz("W1lIQFVcXVhKX1FRX1NIQUJdXA=="), 
+    [10671869186] = _dwrnz("W1lIQFVcXVhKX1FQW1NIQUJdXA=="), 
 
     
-    [2258335228]  = _dyepe("UVlYXVlCSVRaU0tfUFNfUk5GQA=="), 
-    [9687139194]  = _dyepe("UVlYXVlCSVRaU0tfUFNfUk5GQA=="), 
+    [2258335228]  = _dwrnz("W1lIQFVcXFhIV1FTWlNPT0JYVQ=="), 
+    [9687139194]  = _dwrnz("W1lIQFVcXFhIV1FTWlNPT0JYVQ=="), 
 }
 
 local currentId = player.UserId
@@ -115,56 +115,56 @@ local userDateStr = WHITELIST[currentId] or WHITELIST[tostring(currentId)]
 
 local function notify(message)
     pcall(function()
-        StarterGui:SetCore(_dyepe("MAwEDzocDRAOAwgMFwAFBQ=="), { Title = _dyepe("Ozos"), Text = message, Duration = (8 - 3) })
+        StarterGui:SetCore(_dwrnz("OgwUEjYCGBwcBxIAHQAVGA=="), { Title = _dwrnz("MTo8"), Text = message, Duration = (9 - 4) })
     end)
 end
 
-if not userDateStr then notify(_dyepe("u8qz7azZWaHSs+G10kmz7qzHodOw27LuQ7HJsvxToP2wzUu1ybDvsvCq+lmw37Lpu86yxq35odBIssy057Dis8Gq8aDsSw==")); return end
+if not userDateStr then notify(_dwrnz("scqj8KDHTK3At/u52Emj86DZtN+i36jiSbHZr/BNtfGiyVG5w7D/r/y071Wi26jlsc6i26HntNxatta47bDyrs205Kz+Tw==")); return end
 
 local function getTimestampFromDate(_v1)
-    local _v2, _v3, d, _v4, _v5, s = string.match(_v1, _dyepe("PUFPD19aVFFNDkBETkFPD19aWVFNDkBEWUFPD19aQ1FNDkBERw=="))
+    local _v2, _v3, d, _v4, _v5, s = string.match(_v1, _dwrnz("N0FfElNEQV1fClpIREFfElNETF1fClpIU0FfElNEVl1fClpITQ=="))
     if not _v2 then return nil end
     _v2, _v3, d = tonumber(_v2), tonumber(_v3), tonumber(d)
     _v4, _v5, s = tonumber(_v4), tonumber(_v5), tonumber(s)
-    if _v3 < 1 or _v3 > (20 - 8) or _v4 > (44 - 21) or _v5 > (68 - 9) or s > (95 - 36) or d < 1 then return nil end
-    local _v6 = {(45 - 14), ((_v2 % (8 - 4) == 0 and _v2 % (172 - 72) ~= 0) or _v2 % (497 - 97) == 0) and (57 - 28) or (50 - 22), (37 - 6), (38 - 8), (51 - 20), (54 - 24), (41 - 10), (33 - 2), (42 - 12), (42 - 11), (36 - 6), (50 - 19)}
+    if _v3 < 1 or _v3 > (17 - 5) or _v4 > (27 - 4) or _v5 > (90 - 31) or s > (72 - 13) or d < 1 then return nil end
+    local _v6 = {(54 - 23), ((_v2 % (8 - 4) == 0 and _v2 % (190 - 90) ~= 0) or _v2 % (553 - 153) == 0) and (44 - 15) or (44 - 16), (33 - 2), (55 - 25), (38 - 7), (54 - 24), (48 - 17), (33 - 2), (38 - 8), (33 - 2), (58 - 28), (43 - 12)}
     if d > _v6[_v3] then return nil end
     local _v7, _v8 = pcall(function()
-        return DateTime.fromUniversalTime(_v2, _v3, d, _v4, _v5, s).UnixTimestamp - (10991 - 191)
+        return DateTime.fromUniversalTime(_v2, _v3, d, _v4, _v5, s).UnixTimestamp - (11076 - 276)
     end)
     if not _v7 then return nil end
     return _v8
 end
 
 local expiryTime = getTimestampFromDate(userDateStr)
-if not expiryTime then notify(_dyepe("u8Oy0qzDochIs+m10rHNs9Wr0FmwwLPKu9iz4azdWaHPs+21ybDts9Or2FmwzbLpu86y36zZociwzbLuTQ==")); return end
-if DateTime.now().UnixTimestamp >= expiryTime then notify(_dyepe("u86z7azZoP6x40u1xLHes96ryKHPs+i04EhKsv6ryKHEs+JNu86z76zZodWwxbLnu8ZE")); return end
+if not expiryTime then notify(_dwrnz("scOiz6DdtMRat/O52LHdrtm1xVWixKnGsdij/KDDTK3dt/e5w7D9rt+1zVWiyajlsc6iwqDHtMSiyajiRw==")); return end
+if DateTime.now().UnixTimestamp >= expiryTime then notify(_dwrnz("sc6j8KDHtfKj51G5zrHOrtK13a3dt/K46khar/K13a3Wt/hBsc6j8qDHtNmiwajrscZU")); return end
 
 local remainingSeconds = expiryTime - DateTime.now().UnixTimestamp
-local days = math.floor(remainingSeconds / (86503 - 103))
-local hours = math.floor((remainingSeconds % (86600 - 200)) / (3861 - 261))
+local days = math.floor(remainingSeconds / (86756 - 356))
+local hours = math.floor((remainingSeconds % (86779 - 379)) / (3921 - 321))
 
 local function formatArabicNumber(number, _v9, _va, _vb, _vc)
     if number == 1 then return _v9
     elseif number == (3 - 1) then return _va
-    elseif number >= (6 - 3) and number <= (18 - 8) then return _vb
+    elseif number >= (5 - 2) and number <= (13 - 3) then return _vb
     else return _vc end
 end
 
 local parts = {}
-if days > 0 then table.insert(parts, days .. _dyepe("Qw==") .. formatArabicNumber(days, _dyepe("uuOz4632"), _dyepe("uuOz4632oPOx7A=="), _dyepe("u8qz4azUoPw="), _dyepe("uuOz4632"))) end
-if hours > 0 then table.insert(parts, hours .. _dyepe("Qw==") .. formatArabicNumber(hours, _dyepe("u9qyzKzKodA="), _dyepe("u9qyzKzKodOx4LLr"), _dyepe("u9qyzKzKod6wwA=="), _dyepe("u9qyzKzKodA="))) end
+if days > 0 then table.insert(parts, days .. _dwrnz("SQ==") .. formatArabicNumber(days, _dwrnz("sOOj/qHo"), _dwrnz("sOOj/qHotf+j6A=="), _dwrnz("scqj/KDKtfA="), _dwrnz("sOOj/qHo"))) end
+if hours > 0 then table.insert(parts, hours .. _dwrnz("SQ==") .. formatArabicNumber(hours, _dwrnz("sdqi0aDUtNw="), _dwrnz("sdqi0aDUtN+j5Kjn"), _dwrnz("sdqi0aDUtNKixA=="), _dwrnz("sdqi0aDUtNw="))) end
 
-if #parts == 0 then notify(_dyepe("uuyywazboPux4Eu057HNs8Cr06HZssy04LDpS6zQoPux7ku05rDsS6zAod6w07PETQ=="))
-else notify(_dyepe("uuyywazboPux4Eu057HNs8Cr06HZssy04LDpSw==") .. table.concat(parts, _dyepe("Q7DiSw==")) .. _dyepe("TQ==")) end
+if #parts == 0 then notify(_dwrnz("sOyi3KDFtfej5FG47bHdrsy1xq3Ltta46rD5VqDOtfej6lG47LD8VqDetNKi16nIRw=="))
+else notify(_dwrnz("sOyi3KDFtfej5FG47bHdrsy1xq3Ltta46rD5Vg==") .. table.concat(parts, _dwrnz("SbDyVg==")) .. _dwrnz("Rw==")) end
 
-local Dhab = RS:FindFirstChild(_dyepe("JwELCQ=="))
+local Dhab = RS:FindFirstChild(_dwrnz("LQEbFA=="))
 if not Dhab then return end
 
 local function getEvent()
-    local _vd = RS:FindFirstChild(_dyepe("JwELCQ=="))
+    local _vd = RS:FindFirstChild(_dwrnz("LQEbFA=="))
     if not _vd then return nil end
-    return _vd:FindFirstChild(_dyepe("Jh8PBQA="))
+    return _vd:FindFirstChild(_dwrnz("LB8fGAw="))
 end
 
 local Event = getEvent()
@@ -175,21 +175,21 @@ local hasTouch = UIS.TouchEnabled
 
 
 local CFG = {
-    MAX_RANGE           = (5339 - 339),
+    MAX_RANGE           = (5440 - 440),
     MIN_RANGE           = 0,
     FIRE_INTERVAL       = 0.5,
     DRAW_VALUE          = 1,
     REQUIRE_LOS         = false,
-    ESP_COLOR_T5        = Color3.fromRGB((468 - 213), (379 - 164), 0),
-    ESP_COLOR_T6        = Color3.fromRGB((338 - 83), (101 - 41), (114 - 54)),
+    ESP_COLOR_T5        = Color3.fromRGB((462 - 207), (413 - 198), 0),
+    ESP_COLOR_T6        = Color3.fromRGB((402 - 147), (89 - 29), (71 - 11)),
     ESP_BEAM_WIDTH      = 0.6,
-    ESP_BEAM_SEGS       = (10 - 2),
+    ESP_BEAM_SEGS       = (9 - 1),
     PURGE_INTERVAL      = 3.0,
-    AIM_MODE            = _dyepe("CwwLDysRFhcN"),
+    AIM_MODE            = _dwrnz("AQwbEicPAxsf"),
     HEADSHOT_FORWARD    = 0.40,
     HEADSHOT_HEIGHT     = 0.35,
     PREDICTIVE          = true,
-    PROJECTILE_SPEED    = (1528 - 28),
+    PROJECTILE_SPEED    = (1529 - 29),
     PREDICT_GAIN        = 1.0,
     PREDICT_MAX_TIME    = 0.4,
     USE_CLOSEST_SURFACE = true,
@@ -197,38 +197,38 @@ local CFG = {
 }
 
 local VFARM_CFG = {
-    BehindDistance = (29 - 4),
-    HeightOffset   = (8 - 3),
-    RetargetHz     = (5 - 1),
-    YawRightDeg    = -(47 - 7),
+    BehindDistance = (46 - 21),
+    HeightOffset   = (10 - 5),
+    RetargetHz     = (8 - 4),
+    YawRightDeg    = -(68 - 28),
 }
 
 local TIER_COLORS = {
-    [1] = Color3.fromRGB((261 - 101), (215 - 55), (251 - 91)),
-    [(3 - 1)] = Color3.fromRGB(0, (288 - 33), (112 - 22)),
-    [(4 - 1)] = Color3.fromRGB(0, (177 - 17), (503 - 248)),
-    [(5 - 1)] = Color3.fromRGB((218 - 58), 0, (390 - 135)),
-    [(8 - 3)] = CFG.ESP_COLOR_T5,
-    [(12 - 6)] = CFG.ESP_COLOR_T6,
+    [1] = Color3.fromRGB((268 - 108), (259 - 99), (208 - 48)),
+    [(4 - 2)] = Color3.fromRGB(0, (292 - 37), (147 - 57)),
+    [(4 - 1)] = Color3.fromRGB(0, (219 - 59), (344 - 89)),
+    [(6 - 2)] = Color3.fromRGB((173 - 13), 0, (283 - 28)),
+    [(6 - 1)] = CFG.ESP_COLOR_T5,
+    [(9 - 3)] = CFG.ESP_COLOR_T6,
 }
 
 local TARGET_MAP = {
-    [_dyepe("CQgGBhscHQ==")]     = _dyepe("u86z76zfoP2x77Llu8Y="),
-    [_dyepe("BQgYGhUX")]      = _dyepe("u86z763yocix6LPC"),
-    [_dyepe("FwAIGQ==")]        = _dyepe("u86z76zZodGw2w=="),
-    [_dyepe("BQgTGRsGAw==")]     = _dyepe("u86z763yoPOw27Llu9s="),
-    [_dyepe("GggbBBsH")]      = _dyepe("u86z7635od6x6LLlu8M="),
-    [_dyepe("CAgCGRUeGBc=")]    = _dyepe("u86z763woP6w27Lou86z7Q=="),
-    [_dyepe("AgUHCgc=")]       = _dyepe("u86z76zQoP2x77PKu9o="),
-    [_dyepe("DggGCRscCg==")]     = _dyepe("u86z7632oP2wwrLlu9o="),
-    [_dyepe("EAELDRUC")]      = _dyepe("u86z76zHoPix6A=="),
-    [_dyepe("AgsfBh0AERUJAg==")]  = _dyepe("u8qyw637WaDtst+057HH"),
-    [_dyepe("AhoAChA=")]       = _dyepe("u86z76zKoPew2bPBu8Y="),
+    [_dwrnz("AwgWGxcCCA==")]     = _dwrnz("sc6j8qDBtfGj66jpscY="),
+    [_dwrnz("DwgIBxkJ")]      = _dwrnz("sc6j8qHstMSj7KnO"),
+    [_dwrnz("HQAYBA==")]        = _dwrnz("sc6j8qDHtN2i3w=="),
+    [_dwrnz("DwgDBBcYFg==")]     = _dwrnz("sc6j8qHstf+i36jpsds="),
+    [_dwrnz("EAgLGRcZ")]      = _dwrnz("sc6j8qHntNKj7KjpscM="),
+    [_dwrnz("AggSBBkADRs=")]    = _dwrnz("sc6j8qHutfKi36jksc6j8A=="),
+    [_dwrnz("CAUXFws=")]       = _dwrnz("sc6j8qDOtfGj66nGsdo="),
+    [_dwrnz("BAgWFBcCHw==")]     = _dwrnz("sc6j8qHotfGixqjpsdo="),
+    [_dwrnz("GgEbEBkc")]      = _dwrnz("sc6j8qDZtfSj7A=="),
+    [_dwrnz("CAsPGxEeBBkbBg==")]  = _dwrnz("scqi3qHlTKz/tsW47bHX"),
+    [_dwrnz("CBoQFxw=")]       = _dwrnz("sc6j8qDUtfui3anNscY="),
 }
 
-local DISCORD_LINK = _dyepe("Cx0eGwdJVlYMAxgODBsORRMUVkAyUhonLitdXiE=")
-local targetCache = setmetatable({}, {__mode = _dyepe("CA==")})
-local headCache = setmetatable({}, {__mode = _dyepe("CA==")})
+local DISCORD_LINK = _dwrnz("AR0OBgtXQ1oeBwICBhseWB8KQ0wgVgArJCtNQy0=")
+local targetCache = setmetatable({}, {__mode = _dwrnz("Ag==")})
+local headCache = setmetatable({}, {__mode = _dwrnz("Ag==")})
 
 local state = {
     fireOn = true, espT1On = true, espT2On = true, espT3On = true,
@@ -236,8 +236,8 @@ local state = {
     purgeOn = true, nofogOn = false, running = true,
     fired = 0, kills = 0, lastFire = 0,
     tracked = {}, espEntries = {}, targetEntries = {}, hrpAttach = nil,
-    lastFireStatus = _dyepe("CgcDHw=="), lastFireSource = _dyepe("Tg=="), lastFireError = _dyepe("Tg=="),
-    lastFireTargetName = _dyepe("Tg=="),
+    lastFireStatus = _dwrnz("AAcTAg=="), lastFireSource = _dwrnz("RA=="), lastFireError = _dwrnz("RA=="),
+    lastFireTargetName = _dwrnz("RA=="),
 }
 
 local vehicleFarm = {
@@ -252,15 +252,15 @@ local nofogLoopRunning = false
 
 local function killAtmospheres()
     for _, _ve in ipairs(Lighting:GetChildren()) do
-        if _ve:IsA(_dyepe("Ih0HBAcDERwaDw==")) then pcall(function() _ve:Destroy() end) end
+        if _ve:IsA(_dwrnz("KB0XGQsdBBAICw==")) then pcall(function() _ve:Destroy() end) end
     end
 end
 
 local function killFogProperties()
     pcall(function()
         Lighting.FogStart = 0
-        Lighting.FogEnd = (1000362 - 362)
-        Lighting.FogColor = Color3.fromRGB((346 - 91), (373 - 118), (487 - 232))
+        Lighting.FogEnd = (1000166 - 166)
+        Lighting.FogColor = Color3.fromRGB((332 - 77), (351 - 96), (476 - 221))
     end)
 end
 
@@ -275,16 +275,16 @@ local function startNoFog()
     applyNoFog()
     table.insert(nofogConns, Lighting.DescendantAdded:Connect(function(_vf)
         if not state.nofogOn then return end
-        if _vf:IsA(_dyepe("Ih0HBAcDERwaDw==")) then
+        if _vf:IsA(_dwrnz("KB0XGQsdBBAICw==")) then
             task.defer(function()
                 if _vf and _vf.Parent and state.nofogOn then pcall(function() _vf:Destroy() end) end
             end)
         end
     end))
-    table.insert(nofogConns, Lighting:GetPropertyChangedSignal(_dyepe("JQYNLhoX")):Connect(function()
-        if state.nofogOn and Lighting.FogEnd < (1000469 - 469) then Lighting.FogEnd = (1000427 - 427) end
+    table.insert(nofogConns, Lighting:GetPropertyChangedSignal(_dwrnz("LwYdMxYJ")):Connect(function()
+        if state.nofogOn and Lighting.FogEnd < (1000064 - 64) then Lighting.FogEnd = (1000435 - 435) end
     end))
-    table.insert(nofogConns, Lighting:GetPropertyChangedSignal(_dyepe("JQYNOAASCw0=")):Connect(function()
+    table.insert(nofogConns, Lighting:GetPropertyChangedSignal(_dwrnz("LwYdJQwMHgE=")):Connect(function()
         if state.nofogOn and Lighting.FogStart ~= 0 then Lighting.FogStart = 0 end
     end))
     if not nofogLoopRunning then
@@ -308,20 +308,20 @@ end
 
 
 local function getWild()
-    local _vh = workspace:FindFirstChild(_dyepe("JwELCSMaFR0="))
+    local _vh = workspace:FindFirstChild(_dwrnz("LQEbFC8EABE="))
     if _vh then return _vh end
-    _vh = workspace:FindFirstChild(_dyepe("NAAGDxgaHxw="))
+    _vh = workspace:FindFirstChild(_dwrnz("PgAWEhQEChA="))
     if _vh then return _vh end
     for _, _vi in ipairs(workspace:GetChildren()) do
-        local d = _vi:FindFirstChild(_dyepe("JwELCSMaFR0="))
+        local d = _vi:FindFirstChild(_dwrnz("LQEbFC8EABE="))
         if d then return d end
     end
     return nil
 end
 
 local function tierOf(_vj)
-    local _vk = _vj:GetAttribute(_dyepe("NwAPGQ=="))
-    if type(_vk) == _dyepe("EB0YAhoU") then _vk = string.match(_vk, _dyepe("Rg1B")) end
+    local _vk = _vj:GetAttribute(_dwrnz("PQAfBA=="))
+    if type(_vk) == _dwrnz("Gh0IHxYK") then _vk = string.match(_vk, _dwrnz("TA1R")) end
     return tonumber(_vk) or 1
 end
 
@@ -348,27 +348,27 @@ local function getTargetArabicName(_vp)
 end
 
 local function getHitbox(_vs)
-    return _vs:FindFirstChild(_dyepe("KwAeCRsL")) or _vs:FindFirstChild(_dyepe("CwAeCRsL")) or _vs:FindFirstChild(_dyepe("KyA+KTsr"))
+    return _vs:FindFirstChild(_dwrnz("IQAOFBcV")) or _vs:FindFirstChild(_dwrnz("AQAOFBcV")) or _vs:FindFirstChild(_dwrnz("ISAuNDc1"))
 end
 
 local function getHeadBone(_vt)
     local _vu = headCache[_vt]
     if _vu and _vu.Parent == _vt then
-        if _vu:IsA(_dyepe("IQYEDg==")) then
+        if _vu:IsA(_dwrnz("KwYUEw==")) then
             local _vv, _vw = pcall(function() return _vu.WorldPosition end)
             if _vv and _vw and _vw.Magnitude > 0 then return _vw end
             local _vx, _vy = pcall(function() return _vu.WorldCFrame end)
             if _vx and _vy then return _vy.Position end
-        elseif _vu:IsA(_dyepe("IQgZDiQSCw0=")) then return _vu.Position end
+        elseif _vu:IsA(_dwrnz("KwgJEygMHgE=")) then return _vu.Position end
     end
-    local _vz = _vt:FindFirstChild(_dyepe("KwwLDw=="), true)
+    local _vz = _vt:FindFirstChild(_dwrnz("IQwbEg=="), true)
     if not _vz then return nil end
-    if _vz:IsA(_dyepe("IQYEDg==")) then
+    if _vz:IsA(_dwrnz("KwYUEw==")) then
         local _vv, _vw = pcall(function() return _vz.WorldPosition end)
         if _vv and _vw and _vw.Magnitude > 0 then headCache[_vt] = _vz; return _vw end
         local _vx, _vy = pcall(function() return _vz.WorldCFrame end)
         if _vx and _vy then headCache[_vt] = _vz; return _vy.Position end
-    elseif _vz:IsA(_dyepe("IQgZDiQSCw0=")) then
+    elseif _vz:IsA(_dwrnz("KwgJEygMHgE=")) then
         headCache[_vt] = _vz
         return _vz.Position
     end
@@ -376,32 +376,32 @@ local function getHeadBone(_vt)
 end
 
 local function getAimPoint(_v10)
-    if CFG.AIM_MODE == _dyepe("CwwLDysRFhcN") then
+    if CFG.AIM_MODE == _dwrnz("AQwbEicPAxsf") then
         local _v11 = getHeadBone(_v10)
-        if _v11 then return _v11, _dyepe("CwwLDysRFhcN") end
+        if _v11 then return _v11, _dwrnz("AQwbEicPAxsf") end
     end
     local hitbox = getHitbox(_v10)
-    if not hitbox or not hitbox:IsA(_dyepe("IQgZDiQSCw0=")) then
-        return _v10.PrimaryPart and _v10.PrimaryPart.Position or nil, _dyepe("ExsDBhUBAAkJGB8=")
+    if not hitbox or not hitbox:IsA(_dwrnz("KwgJEygMHgE=")) then
+        return _v10.PrimaryPart and _v10.PrimaryPart.Position or nil, _dwrnz("GRsTGxkfFQUbHAU=")
     end
-    if CFG.AIM_MODE == _dyepe("CwAeCRsL") then return hitbox.Position, _dyepe("CwAeCRsL")
-    elseif CFG.AIM_MODE == _dyepe("CwAeCRsLJhEBDQM=") then
-        return hitbox.Position + Vector3.new(0, hitbox.Size.Y * CFG.HEADSHOT_HEIGHT, 0), _dyepe("CwAeCRsLJhEBDQM=")
-    elseif CFG.AIM_MODE == _dyepe("CwAeCRsLJhENCw8=") or CFG.AIM_MODE == _dyepe("CwwLDysRFhcN") then
+    if CFG.AIM_MODE == _dwrnz("AQAOFBcV") then return hitbox.Position, _dwrnz("AQAOFBcV")
+    elseif CFG.AIM_MODE == _dwrnz("AQAOFBcVMx0TCRk=") then
+        return hitbox.Position + Vector3.new(0, hitbox.Size.Y * CFG.HEADSHOT_HEIGHT, 0), _dwrnz("AQAOFBcVMx0TCRk=")
+    elseif CFG.AIM_MODE == _dwrnz("AQAOFBcVMx0fDxU=") or CFG.AIM_MODE == _dwrnz("AQwbEicPAxsf") then
         local _v12  = Vector3.new(0, hitbox.Size.Y * CFG.HEADSHOT_HEIGHT, 0)
         local _v13 = -hitbox.CFrame.LookVector * (hitbox.Size.Z * CFG.HEADSHOT_FORWARD)
-        return hitbox.Position + _v12 + _v13, _dyepe("CwAeCRsLJhENCw8=")
+        return hitbox.Position + _v12 + _v13, _dwrnz("AQAOFBcVMx0fDxU=")
     else
-        return _v10.PrimaryPart and _v10.PrimaryPart.Position or nil, _dyepe("ExsDBhUBAAkJGB8=")
+        return _v10.PrimaryPart and _v10.PrimaryPart.Position or nil, _dwrnz("GRsTGxkfFQUbHAU=")
     end
 end
 
 local function predictAimPos(_v14, _v15, _v16)
     if not CFG.PREDICTIVE then return _v14 end
-    local _v17 = _v15:FindFirstChildOfClass(_dyepe("KxwHChocEB0="))
+    local _v17 = _v15:FindFirstChildOfClass(_dwrnz("IRwXFxYCBRE="))
     local _v18 = Vector3.zero
     if _v17 and _v17.MoveDirection and _v17.MoveDirection.Magnitude > 0.1 then
-        local _v19 = _v17.WalkSpeed or (32 - 16)
+        local _v19 = _v17.WalkSpeed or (20 - 4)
         _v18 = _v17.MoveDirection * _v19
     else
         local hitbox = getHitbox(_v15)
@@ -417,7 +417,7 @@ end
 
 local function getClosestDistance(_v1c, _v1d)
     local hitbox = getHitbox(_v1d)
-    if CFG.USE_CLOSEST_SURFACE and hitbox and hitbox:IsA(_dyepe("IQgZDiQSCw0=")) then
+    if CFG.USE_CLOSEST_SURFACE and hitbox and hitbox:IsA(_dwrnz("KwgJEygMHgE=")) then
         local _v1e, closest = pcall(function() return hitbox:ClosestPointOnSurface(_v1c) end)
         if _v1e and closest then return (closest - _v1c).Magnitude end
     end
@@ -442,24 +442,24 @@ end
 
 
 local function createTargetESP(_v1k, _v1l)
-    local _v1m = Instance.new(_dyepe("KwANAxgaHhEc"))
-    _v1m.FillColor = Color3.fromRGB((321 - 66), (496 - 241), (386 - 131))
+    local _v1m = Instance.new(_dwrnz("IQAdHhQECx0O"))
+    _v1m.FillColor = Color3.fromRGB((464 - 209), (453 - 198), (481 - 226))
     _v1m.FillTransparency = 0.5
-    _v1m.OutlineColor = Color3.fromRGB((422 - 167), (466 - 211), (381 - 126))
+    _v1m.OutlineColor = Color3.fromRGB((374 - 119), (321 - 66), (297 - 42))
     _v1m.OutlineTransparency = 0
     _v1m.Adornee = _v1k
     pcall(function() _v1m.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop end)
     _v1m.Parent = _v1k
 
-    local _v1n = Instance.new(_dyepe("IQAGBxYcGAsMLR4E"))
-    _v1n.Name = _dyepe("NwgYDBEHPCo4NSkq")
+    local _v1n = Instance.new(_dwrnz("KwAWGhoCDQceKQQI"))
+    _v1n.Name = _dwrnz("PQgIER0ZKSYqMTMm")
     _v1n.Adornee = _v1k.PrimaryPart
-    _v1n.Size = UDim2.new(0, (321 - 1), 0, (209 - 89))
-    _v1n.StudsOffset = Vector3.new(0, (9 - 3), 0)
+    _v1n.Size = UDim2.new(0, (449 - 129), 0, (232 - 112))
+    _v1n.StudsOffset = Vector3.new(0, (11 - 5), 0)
     _v1n.AlwaysOnTop = true
     _v1n.Parent = _v1k
 
-    local _v1o = Instance.new(_dyepe("NwwSHzgSGxwE"))
+    local _v1o = Instance.new(_dwrnz("PQwCAjQMDhAW"))
     _v1o.Size = UDim2.new(1, 0, 0.7, 0)
     _v1o.Position = UDim2.new(0, 0, 0, 0)
     _v1o.BackgroundTransparency = 1
@@ -468,24 +468,24 @@ local function createTargetESP(_v1k, _v1l)
     _v1o.TextSize = (50 - 10)
     _v1o.TextStrokeTransparency = 0
     _v1o.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
-    _v1o.TextColor3 = Color3.fromRGB((389 - 134), (367 - 112), (391 - 136))
+    _v1o.TextColor3 = Color3.fromRGB((480 - 225), (494 - 239), (491 - 236))
     _v1o.Parent = _v1n
 
-    local _v1p = Instance.new(_dyepe("NiAtGRUXEBwGHg=="))
+    local _v1p = Instance.new(_dwrnz("PCA9BBkJBRAUGg=="))
     _v1p.Color = getSmoothRainbow()
     _v1p.Parent = _v1o
 
-    local _v1q = Instance.new(_dyepe("NwwSHzgSGxwE"))
-    _v1q.Name = _dyepe("JwAZHxUdGhwkCwkIDw==")
+    local _v1q = Instance.new(_dwrnz("PQwCAjQMDhAW"))
+    _v1q.Name = _dwrnz("LQAJAhkDDxA2DxMEBQ==")
     _v1q.Size = UDim2.new(1, 0, 0.3, 0)
     _v1q.Position = UDim2.new(0, 0, 0.7, 0)
     _v1q.BackgroundTransparency = 1
     _v1q.Font = Enum.Font.GothamBold
-    _v1q.TextSize = (28 - 12)
+    _v1q.TextSize = (17 - 1)
     _v1q.TextStrokeTransparency = 0
     _v1q.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
-    _v1q.TextColor3 = Color3.fromRGB((354 - 99), (440 - 185), (134 - 34))
-    _v1q.Text = _dyepe("TkRH")
+    _v1q.TextColor3 = Color3.fromRGB((505 - 250), (446 - 191), (115 - 15))
+    _v1q.Text = _dwrnz("RERX")
     _v1q.Parent = _v1n
 
     return {
@@ -507,7 +507,7 @@ end
 
 local function createESP(_v1t, _v1u)
     local _v1v = TIER_COLORS[_v1u] or TIER_COLORS[1]
-    local _v1w = Instance.new(_dyepe("KwANAxgaHhEc"))
+    local _v1w = Instance.new(_dwrnz("IQAdHhQECx0O"))
     _v1w.FillColor = _v1v
     _v1w.FillTransparency = 0.5
     _v1w.OutlineColor = _v1v
@@ -537,34 +537,34 @@ end
 local function renderBeam(_v20, _v21, _v22)
     local _v23 = player.Character
     if not _v23 then return end
-    local _v24 = _v23:FindFirstChild(_dyepe("KxwHChocEB06BQQZMwgYHw=="))
+    local _v24 = _v23:FindFirstChild(_dwrnz("IRwXFxYCBREoAR4VOQgIAg=="))
     if not _v24 then return end
-    local _v25 = _v20.PrimaryPart or _v20:FindFirstChildWhichIsA(_dyepe("IQgZDiQSCw0=")) or _v20:FindFirstChild(_dyepe("KwAeCRsL"))
+    local _v25 = _v20.PrimaryPart or _v20:FindFirstChildWhichIsA(_dwrnz("KwgJEygMHgE=")) or _v20:FindFirstChild(_dwrnz("IQAOFBcV"))
     if not _v25 then return end
 
     if not _v21.att0 or not _v21.att0.Parent then
-        _v21.att0 = Instance.new(_dyepe("Ih0eChcbFBwGHg=="))
-        _v21.att0.Name = _dyepe("OyI1KRESFDgcHls=")
+        _v21.att0 = Instance.new(_dwrnz("KB0OFxsFARAUGg=="))
+        _v21.att0.Name = _dwrnz("MSIlNB0MATQOGkE=")
         _v21.att0.Parent = _v24
     else
         _v21.att0.Parent = _v24
     end
 
     if not _v21.att1 or not _v21.att1.Parent then
-        _v21.att1 = Instance.new(_dyepe("Ih0eChcbFBwGHg=="))
-        _v21.att1.Name = _dyepe("OyI1KRESFDgcHlo=")
+        _v21.att1 = Instance.new(_dwrnz("KB0OFxsFARAUGg=="))
+        _v21.att1.Name = _dwrnz("MSIlNB0MATQOGkA=")
         _v21.att1.Parent = _v25
     else
         _v21.att1.Parent = _v25
     end
 
     if not _v21.beam or not _v21.beam.Parent then
-        _v21.beam = Instance.new(_dyepe("IQwLBg=="))
+        _v21.beam = Instance.new(_dwrnz("KwwbGw=="))
         _v21.beam.Attachment0 = _v21.att0
         _v21.beam.Attachment1 = _v21.att1
         _v21.beam.FaceCamera = true
         _v21.beam.LightEmission = 1
-        _v21.beam.Segments = (25 - 10)
+        _v21.beam.Segments = (21 - 6)
         _v21.beam.Transparency = NumberSequence.new(0)
         _v21.beam.Texture = ""
         _v21.beam.CurveSize0 = 0
@@ -576,8 +576,8 @@ local function renderBeam(_v20, _v21, _v22)
     _v21.beam.Attachment1 = _v21.att1
 
     if _v22 then
-        _v21.beam.Width0 = (7 - 1)
-        _v21.beam.Width1 = (11 - 5)
+        _v21.beam.Width0 = (10 - 4)
+        _v21.beam.Width1 = (10 - 4)
         _v21.beam.Color = getSmoothRainbow()
     else
         _v21.beam.Width0 = CFG.ESP_BEAM_WIDTH
@@ -592,12 +592,12 @@ local function updateESP()
     local _v27 = {}
     local _v28 = {}
     local _v29 = player.Character
-    local _v2a = _v29 and _v29:FindFirstChild(_dyepe("KxwHChocEB06BQQZMwgYHw=="))
+    local _v2a = _v29 and _v29:FindFirstChild(_dwrnz("IRwXFxYCBREoAR4VOQgIAg=="))
     local _v2b = _v2a and _v2a.Position
 
     if _v26 then
         for _, _v2c in ipairs(_v26:GetChildren()) do
-            if _v2c:IsA(_dyepe("LgYODhg=")) and _v2c.PrimaryPart and _v2c:GetAttribute(_dyepe("MB0LHxE=")) ~= _dyepe("BwwLDw==") then
+            if _v2c:IsA(_dwrnz("JAYeExQ=")) and _v2c.PrimaryPart and _v2c:GetAttribute(_dwrnz("Oh0bAh0=")) ~= _dwrnz("DQwbEg==") then
                 local _v2d = getTargetArabicName(_v2c)
                 if state.targetOn and _v2d then
                     _v27[_v2c] = true
@@ -610,7 +610,7 @@ local function updateESP()
                     if _v2e.billboard then _v2e.billboard.Adornee = _v2c.PrimaryPart end
                     if _v2e.distanceLabel and _v2b then
                         local d = (_v2c.PrimaryPart.Position - _v2b).Magnitude
-                        _v2e.distanceLabel.Text = string.format(_dyepe("Rg1KsvGr06HZ"), math.floor(d))
+                        _v2e.distanceLabel.Text = string.format(_dwrnz("TA1ar/21xq3L"), math.floor(d))
                     end
                     renderBeam(_v2c, _v2e, true)
                 else
@@ -618,10 +618,10 @@ local function updateESP()
                     local _v2f = tierOf(_v2c)
                     local _v2g =
                         (_v2f == 1 and state.espT1On) or
-                        (_v2f == (4 - 2) and state.espT2On) or
-                        (_v2f == (5 - 2) and state.espT3On) or
-                        (_v2f == (8 - 4) and state.espT4On) or
-                        (_v2f == (10 - 5) and state.espT5On) or
+                        (_v2f == (3 - 1) and state.espT2On) or
+                        (_v2f == (6 - 3) and state.espT3On) or
+                        (_v2f == (6 - 2) and state.espT4On) or
+                        (_v2f == (7 - 2) and state.espT5On) or
                         (_v2f == (7 - 1) and state.espT6On)
                     if _v2g then
                         _v28[_v2c] = true
@@ -639,28 +639,28 @@ local function updateESP()
     end
 
     for _v2c in pairs(state.espEntries) do
-        if not _v28[_v2c] or not _v2c.Parent or _v2c:GetAttribute(_dyepe("MB0LHxE=")) == _dyepe("BwwLDw==") then
+        if not _v28[_v2c] or not _v2c.Parent or _v2c:GetAttribute(_dwrnz("Oh0bAh0=")) == _dwrnz("DQwbEg==") then
             destroyESP(_v2c)
         end
     end
     for _v2c in pairs(state.targetEntries) do
-        if not _v27[_v2c] or not _v2c.Parent or _v2c:GetAttribute(_dyepe("MB0LHxE=")) == _dyepe("BwwLDw==") then
+        if not _v27[_v2c] or not _v2c.Parent or _v2c:GetAttribute(_dwrnz("Oh0bAh0=")) == _dwrnz("DQwbEg==") then
             destroyTargetESP(_v2c)
         end
     end
 end
 
-local PURGE_TARGETS = { _dyepe("JwwZDgYH"), _dyepe("NAgOAisxGAoJBh8=") }
+local PURGE_TARGETS = { _dwrnz("LQwJEwoZ"), _dwrnz("PggeHycvDQYbAgU=") }
 
 local function purgeDesertCompletely()
     for _, _v2h in ipairs(PURGE_TARGETS) do
-        local _v2i = Workspace:FindFirstChild(_dyepe("JwELCSMcCxUM"))
+        local _v2i = Workspace:FindFirstChild(_dwrnz("LQEbFC8CHhke"))
         if _v2i then
             local target = _v2i:FindFirstChild(_v2h)
             if target then pcall(function() target:Destroy() end) end
         end
         local _v2j = 0
-        while _v2j < (81 - 31) do
+        while _v2j < (72 - 22) do
             local d = Workspace:FindFirstChild(_v2h, true)
             if not d then break end
             pcall(function() d:Destroy() end)
@@ -674,7 +674,7 @@ local function findClosest(_v2k)
     if not _v2l then return nil end
     local _v2m, _v2n = nil, 1e9
     for _, _v2o in ipairs(_v2l:GetChildren()) do
-        if _v2o:IsA(_dyepe("LgYODhg=")) and _v2o.PrimaryPart and _v2o:GetAttribute(_dyepe("MB0LHxE=")) ~= _dyepe("BwwLDw==") then
+        if _v2o:IsA(_dwrnz("JAYeExQ=")) and _v2o.PrimaryPart and _v2o:GetAttribute(_dwrnz("Oh0bAh0=")) ~= _dwrnz("DQwbEg==") then
             local d = getClosestDistance(_v2k, _v2o)
             if d >= CFG.MIN_RANGE and d <= CFG.MAX_RANGE and d < _v2n then
                 _v2m = _v2o
@@ -690,7 +690,7 @@ local function findClosestFarm(_v2p)
     if not _v2q then return nil end
     local _v2r, _v2s = nil, 1e9
     for _, _v2t in ipairs(_v2q:GetChildren()) do
-        if _v2t:IsA(_dyepe("LgYODhg=")) and _v2t.PrimaryPart and _v2t:GetAttribute(_dyepe("MB0LHxE=")) ~= _dyepe("BwwLDw==") then
+        if _v2t:IsA(_dwrnz("JAYeExQ=")) and _v2t.PrimaryPart and _v2t:GetAttribute(_dwrnz("Oh0bAh0=")) ~= _dwrnz("DQwbEg==") then
             local d = (_v2t.PrimaryPart.Position - _v2p).Magnitude
             if d <= CFG.MAX_RANGE and d < _v2s then
                 _v2r = _v2t
@@ -717,11 +717,11 @@ end
 
 
 local function getFireOrigin(_v30)
-    local _v31 = _v30 and _v30:FindFirstChild(_dyepe("KxwHChocEB06BQQZMwgYHw=="))
+    local _v31 = _v30 and _v30:FindFirstChild(_dwrnz("IRwXFxYCBREoAR4VOQgIAg=="))
     if not _v31 then return nil end
     if vehicleFarm.active then
-        local _v32 = _v30:FindFirstChildOfClass(_dyepe("KxwHChocEB0="))
-        if _v32 and _v32.SeatPart and _v32.SeatPart:IsA(_dyepe("NQwCAhcfHCoNCx8=")) then
+        local _v32 = _v30:FindFirstChildOfClass(_dwrnz("IRwXFxYCBRE="))
+        if _v32 and _v32.SeatPart and _v32.SeatPart:IsA(_dwrnz("PwwSHxsBCSYfDwU=")) then
             local _v33 = _v31.CFrame.RightVector * CFG.RIGHT_SHIFT_AMOUNT
             return _v31.Position + _v33
         end
@@ -735,7 +735,7 @@ local function checkKills()
             state.kills += 1
             state.tracked[_v34] = nil
             destroyESP(_v34)
-        elseif _v34:GetAttribute(_dyepe("MB0LHxE=")) == _dyepe("BwwLDw==") then
+        elseif _v34:GetAttribute(_dwrnz("Oh0bAh0=")) == _dwrnz("DQwbEg==") then
             state.kills += 1
             state.tracked[_v34] = nil
             destroyESP(_v34)
@@ -746,18 +746,18 @@ end
 
 local function getVehicleRoot()
     local _v35 = player.Character
-    local _v36 = _v35 and _v35:FindFirstChildOfClass(_dyepe("KxwHChocEB0="))
+    local _v36 = _v35 and _v35:FindFirstChildOfClass(_dwrnz("IRwXFxYCBRE="))
     local _v37 = _v36 and _v36.SeatPart
-    if not _v37 or not _v37:IsA(_dyepe("NQwCAhcfHCoNCx8=")) then
-        return nil, _dyepe("DQYeNB0dJg8NAgIODww=")
+    if not _v37 or not _v37:IsA(_dwrnz("PwwSHxsBCSYfDwU=")) then
+        return nil, _dwrnz("BwYOKREDMwMfBhgCBQw=")
     end
-    local _v38 = _v37:FindFirstAncestorOfClass(_dyepe("LgYODhg="))
-    if not _v38 then return nil, _dyepe("DQY1BhsXHBU=") end
+    local _v38 = _v37:FindFirstAncestorOfClass(_dwrnz("JAYeExQ="))
+    if not _v38 then return nil, _dwrnz("BwYlGxcJCRk=") end
     local _v39 = _v38.PrimaryPart
     if not _v39 then
         local _v3a, _v3b = nil, 0
         for _, d in ipairs(_v38:GetDescendants()) do
-            if d:IsA(_dyepe("IQgZDiQSCw0=")) and not d.Anchored then
+            if d:IsA(_dwrnz("KwgJEygMHgE=")) and not d.Anchored then
                 if d.AssemblyMass > _v3b then
                     _v3b = d.AssemblyMass
                     _v3a = d
@@ -766,22 +766,22 @@ local function getVehicleRoot()
         end
         _v39 = _v3a
     end
-    if not _v39 then return nil, _dyepe("DQY1GxUBDQ==") end
+    if not _v39 then return nil, _dwrnz("BwYlBhkfGA==") end
     return _v39, nil
 end
 
 local function vehicleNoclipOn()
     if next(vehicleFarm.origCollide) then return end
     local _v3c = player.Character
-    local _v3d = _v3c and _v3c:FindFirstChildOfClass(_dyepe("KxwHChocEB0="))
+    local _v3d = _v3c and _v3c:FindFirstChildOfClass(_dwrnz("IRwXFxYCBRE="))
     local _v3e = _v3d and _v3d.SeatPart
     if not _v3e then return end
-    local _v3f = _v3e:FindFirstAncestorOfClass(_dyepe("LgYODhg="))
+    local _v3f = _v3e:FindFirstAncestorOfClass(_dwrnz("JAYeExQ="))
     if not _v3f then return end
 
     vehicleFarm.origCollide = {}
     for _, _v3g in ipairs(_v3f:GetDescendants()) do
-        if _v3g:IsA(_dyepe("IQgZDiQSCw0=")) then
+        if _v3g:IsA(_dwrnz("KwgJEygMHgE=")) then
             vehicleFarm.origCollide[_v3g] = _v3g.CanCollide
             pcall(function() _v3g.CanCollide = false end)
         end
@@ -802,17 +802,17 @@ local vfarmBtn, vfarmBtnLabel, vfarmBtnDot, vfarmBtnStroke
 local function vehicleFarmSyncButton()
     if not (vfarmBtn and vfarmBtn.Parent and vfarmBtnLabel) then return end
     if vehicleFarm.active then
-        vfarmBtn.BackgroundColor3 = Color3.fromRGB((11 - 1), (47 - 7), (71 - 31))
+        vfarmBtn.BackgroundColor3 = Color3.fromRGB((13 - 3), (68 - 28), (71 - 31))
         if vfarmBtnStroke then vfarmBtnStroke.Color = THEME.GREEN; vfarmBtnStroke.Transparency = 0.6 end
         if vfarmBtnDot then vfarmBtnDot.BackgroundColor3 = THEME.GREEN end
         vfarmBtnLabel.TextColor3 = THEME.GREEN
-        vfarmBtnLabel.Text = _dyepe("u92y0azUoP1IiOv5Q7HNs8Krw6HfSrLpuu2yzq35oPuwzbLs")
+        vfarmBtnLabel.Text = _dwrnz("sd2izKDKtfFajPH1SbHdrs611q3NTqjlsO2i06Hntfeiyajg")
     else
-        vfarmBtn.BackgroundColor3 = Color3.fromRGB((49 - 24), (42 - 17), (48 - 23))
+        vfarmBtn.BackgroundColor3 = Color3.fromRGB((29 - 4), (47 - 22), (39 - 14))
         if vfarmBtnStroke then vfarmBtnStroke.Color = THEME.CYAN; vfarmBtnStroke.Transparency = 0.6 end
         if vfarmBtnDot then vfarmBtnDot.BackgroundColor3 = THEME.CYAN end
         vfarmBtnLabel.TextColor3 = THEME.CYAN
-        vfarmBtnLabel.Text = _dyepe("uuuywa33WaHPs++11bHCs9Oq/1mwwrPKuu2y2K35od6w27LqQ7HCs8Cq+qDsSrPHuu2z6azUod+x4A==")
+        vfarmBtnLabel.Text = _dwrnz("sOui3KHpTK3dt/W537HSrt+06lWixqnGsO2ixaHntNKi36jmSbHSrsy076z+TqnLsO2j9KDKtNOj5A==")
     end
 end
 
@@ -839,16 +839,16 @@ local function vehicleFarmStart()
 
     local _v3j, _v3k = getVehicleRoot()
     if not _v3j then
-        notify(_dyepe("u8qz7azZWaDtssNNu8GyzK33ocqx4LPKu9iywg=="))
-        return false, _v3k or _dyepe("DQYeNB0dJg8NAgIODww=")
+        notify(_dwrnz("scqj8KDHTKz/ttlBscGi0aHptMaj5KnGsdii3w=="))
+        return false, _v3k or _dwrnz("BwYOKREDMwMfBhgCBQw=")
     end
 
     local _v3l = player.Character
-    local _v3m = _v3l and _v3l:FindFirstChildOfClass(_dyepe("KxwHChocEB0="))
+    local _v3m = _v3l and _v3l:FindFirstChildOfClass(_dwrnz("IRwXFxYCBRE="))
     local _v3n = _v3m and _v3m.SeatPart
     if not _v3n then
-        notify(_dyepe("u8qz7azZWaDtssNNu8GyzK33ocqx4LPKu9iywg=="))
-        return false, _dyepe("DQY1GBESDQ==")
+        notify(_dwrnz("scqj8KDHTKz/ttlBscGi0aHptMaj5KnGsdii3w=="))
+        return false, _dwrnz("BwYlBR0MGA==")
     end
 
     local _v3o = _v3j.CFrame:VectorToObjectSpace(_v3n.CFrame.LookVector)
@@ -862,8 +862,8 @@ local function vehicleFarmStart()
         return CFrame.lookAt(Vector3.zero, _v3o)
     end)
     if not _v3p or not _v3q then
-        notify(_dyepe("uuiy3633WaHFsti1xLHCS6zUoP2wzbPHu8WyzK30"))
-        return false, _dyepe("BwAYNBISEBU=")
+        notify(_dwrnz("sOiiwqHpTK3XtsK5zrHSVqDKtfGiyanLscWi0aHq"))
+        return false, _dwrnz("DQAIKR4MBRk=")
     end
 
     vehicleFarm.active = true
@@ -875,29 +875,29 @@ local function vehicleFarmStart()
 
     vehicleNoclipOn()
 
-    local _v3r = Instance.new(_dyepe("Ih0eChcbFBwGHg=="))
-    _v3r.Name = _dyepe("OyI1LRUBFDgcHg==")
+    local _v3r = Instance.new(_dwrnz("KB0OFxsFARAUGg=="))
+    _v3r.Name = _dwrnz("MSIlMBkfATQOGg==")
     _v3r.Parent = _v3j
     vehicleFarm.att = _v3r
 
-    local _v3s = Instance.new(_dyepe("IgUDDBojFgoBHgICDQ=="))
+    local _v3s = Instance.new(_dwrnz("KAUTERY9AwYTGhgOBw=="))
     _v3s.Mode = Enum.PositionAlignmentMode.OneAttachment
     _v3s.Attachment0 = _v3r
     _v3s.Position = _v3j.Position
     _v3s.MaxForce = math.huge
-    _v3s.Responsiveness = (338 - 138)
+    _v3s.Responsiveness = (245 - 45)
     _v3s.RigidityEnabled = true
     _v3s.ApplyAtCenterOfMass = true
     _v3s.Parent = _v3j
     vehicleFarm.ap = _v3s
 
-    local _v3t = Instance.new(_dyepe("IgUDDBo8CxANBB8MFwAFBQ=="))
+    local _v3t = Instance.new(_dwrnz("KAUTERYiHhwfAAUAHQAVGA=="))
     _v3t.Mode = Enum.OrientationAlignmentMode.OneAttachment
     _v3t.Attachment0 = _v3r
     local _v3u = (_v3j.CFrame - _v3j.CFrame.Position) * _v3q:Inverse()
     _v3t.CFrame = _v3u - _v3u.Position
     _v3t.MaxTorque = math.huge
-    _v3t.Responsiveness = (325 - 125)
+    _v3t.Responsiveness = (307 - 107)
     _v3t.RigidityEnabled = true
     _v3t.Parent = _v3j
     vehicleFarm.ao = _v3t
@@ -910,7 +910,7 @@ local function vehicleFarmStart()
         if not vehicleFarm.active or vehicleFarm.session ~= _v3v then return end
 
         local _v4c = player.Character
-        local _v4d = _v4c and _v4c:FindFirstChildOfClass(_dyepe("KxwHChocEB0="))
+        local _v4d = _v4c and _v4c:FindFirstChildOfClass(_dwrnz("IRwXFxYCBRE="))
         if not _v4d or not _v4d.SeatPart then vehicleFarmStop(); return end
 
         local _v4e = vehicleFarm.rootPart
@@ -920,7 +920,7 @@ local function vehicleFarmStart()
         if _v4f - vehicleFarm.lastRetarget >= (1 / VFARM_CFG.RetargetHz)
             or not vehicleFarm.target
             or not vehicleFarm.target.Parent
-            or vehicleFarm.target:GetAttribute(_dyepe("MB0LHxE=")) == _dyepe("BwwLDw==") then
+            or vehicleFarm.target:GetAttribute(_dwrnz("Oh0bAh0=")) == _dwrnz("DQwbEg==") then
             vehicleFarm.lastRetarget = _v4f
             vehicleFarm.target = findClosestFarm(_v4e.Position)
         end
@@ -980,7 +980,7 @@ end)
 local fireThread = task.spawn(function()
     while state.running do
         if not state.fireOn then
-            state.lastFireStatus = _dyepe("BQAYDjsVHw==")
+            state.lastFireStatus = _dwrnz("DwAIEzcLCg==")
             task.wait(0.1)
             continue
         end
@@ -992,69 +992,69 @@ local fireThread = task.spawn(function()
 
         local _v4r, _v4s = pcall(function()
             local _v53 = player.Character
-            if not _v53 then state.lastFireStatus = _dyepe("DQY1CBwSCw=="); return end
-            local _v54 = _v53:FindFirstChild(_dyepe("KwwLDw=="))
-            if not _v54 then state.lastFireStatus = _dyepe("DQY1AxESHQ=="); return end
-            local _v55 = _v53:FindFirstChildOfClass(_dyepe("KxwHChocEB0="))
-            if not _v55 or _v55.Health <= 0 then state.lastFireStatus = _dyepe("BwwLDysbDBQ="); return end
+            if not _v53 then state.lastFireStatus = _dwrnz("BwYlFRAMHg=="); return end
+            local _v54 = _v53:FindFirstChild(_dwrnz("IQwbEg=="))
+            if not _v54 then state.lastFireStatus = _dwrnz("BwYlHh0MCA=="); return end
+            local _v55 = _v53:FindFirstChildOfClass(_dwrnz("IRwXFxYCBRE="))
+            if not _v55 or _v55.Health <= 0 then state.lastFireStatus = _dwrnz("DQwbEicFGRg="); return end
 
             checkKills()
 
             local target = nil
-            local source = _dyepe("DQYEDg==")
+            local source = _dwrnz("BwYUEw==")
             if vehicleFarm.active then
                 local _v56 = vehicleFarm.target
-                if _v56 and _v56.Parent and _v56.PrimaryPart and _v56:GetAttribute(_dyepe("MB0LHxE=")) ~= _dyepe("BwwLDw==") then
+                if _v56 and _v56.Parent and _v56.PrimaryPart and _v56:GetAttribute(_dwrnz("Oh0bAh0=")) ~= _dwrnz("DQwbEg==") then
                     target = _v56
-                    source = _dyepe("BQgYBg==")
+                    source = _dwrnz("DwgIGw==")
                 end
             end
             if not target then
                 target = findClosest(_v54.Position)
-                if target then source = _dyepe("AAUFGBEADQ==") end
+                if target then source = _dwrnz("CgUVBR0eGA==") end
             end
 
-            if not target then state.lastFireStatus = _dyepe("DQY1HxUBHhwc"); return end
-            if not target.Parent then state.lastFireStatus = _dyepe("FwgYDBEHJhcHGgofBgce"); return end
-            if not target.PrimaryPart then state.lastFireStatus = _dyepe("FwgYDBEHJhcHGhkEDggYEg=="); return end
-            if target:GetAttribute(_dyepe("MB0LHxE=")) == _dyepe("BwwLDw==") then state.lastFireStatus = _dyepe("FwgYDBEHJh0NCw8="); return end
-            if not hasLOS(_v54.Position, target, _v53) then state.lastFireStatus = _dyepe("DQY1BxsA"); return end
+            if not target then state.lastFireStatus = _dwrnz("BwYlAhkfCxAO"); return end
+            if not target.Parent then state.lastFireStatus = _dwrnz("HQgIER0ZMxsVHhATDAcO"); return end
+            if not target.PrimaryPart then state.lastFireStatus = _dwrnz("HQgIER0ZMxsVHgMIBAgIDw=="); return end
+            if target:GetAttribute(_dwrnz("Oh0bAh0=")) == _dwrnz("DQwbEg==") then state.lastFireStatus = _dwrnz("HQgIER0ZMxEfDxU="); return end
+            if not hasLOS(_v54.Position, target, _v53) then state.lastFireStatus = _dwrnz("BwYlGhce"); return end
 
             local _v57 = getFireOrigin(_v53)
-            if not _v57 then state.lastFireStatus = _dyepe("DQY1BAYaHhAG"); return end
+            if not _v57 then state.lastFireStatus = _dwrnz("BwYlGQoECxwU"); return end
 
             local _v58 = getAimPoint(target)
-            if not _v58 then state.lastFireStatus = _dyepe("DQY1Ch0eCRYBBB8="); return end
+            if not _v58 then state.lastFireStatus = _dwrnz("BwYlFxEAHBoTAAU="); return end
             _v58 = predictAimPos(_v58, target, _v57)
 
             local _v59 = _v58 - _v57
-            if _v59.Magnitude < 0.001 then state.lastFireStatus = _dyepe("GQwYBCsXEAs="); return end
+            if _v59.Magnitude < 0.001 then state.lastFireStatus = _dwrnz("EwwIGScJBQc="); return end
 
             local _v5a = Event
             if not _v5a or not _v5a.Parent then
                 _v5a = getEvent()
-                if not _v5a then state.lastFireStatus = _dyepe("DQY1DgIWFw0="); return end
+                if not _v5a then state.lastFireStatus = _dwrnz("BwYlEw4IAgE="); return end
                 Event = _v5a
             end
 
             local _v5b, _v5c = pcall(function()
-                _v5a:FireServer(_dyepe("JQAYDg=="), { origin = _v57, direction = _v59.Unit, draw = CFG.DRAW_VALUE })
+                _v5a:FireServer(_dwrnz("LwAIEw=="), { origin = _v57, direction = _v59.Unit, draw = CFG.DRAW_VALUE })
             end)
             if _v5b then
                 state.fired += 1
                 state.lastFire = _v4q
                 state.tracked[target] = true
-                state.lastFireStatus = _dyepe("BQAYDhAsFhI=")
+                state.lastFireStatus = _dwrnz("DwAIExwyAx4=")
                 state.lastFireSource = source
                 state.lastFireTargetName = target.Name
             else
-                state.lastFireStatus = _dyepe("BQAYDgYWFBYcDzQIERs=")
+                state.lastFireStatus = _dwrnz("DwAIEwoIARoOCy4EGxs=")
                 state.lastFireError = tostring(_v5c)
             end
         end)
 
         if not _v4r then
-            state.lastFireStatus = _dyepe("EwoLBxgsHAsa")
+            state.lastFireStatus = _dwrnz("GQobGhQyCQcI")
             state.lastFireError = tostring(_v4s)
         end
 
@@ -1071,127 +1071,127 @@ end)
 
 
 local function protectGui(_v5d)
-    if type(protectgui) == _dyepe("BRwECAAaFhc=") then pcall(function() protectgui(_v5d) end) end
-    if type(syn) == _dyepe("FwgIBxE=") and type(syn.protect_gui) == _dyepe("BRwECAAaFhc=") then pcall(function() syn.protect_gui(_v5d) end) end
+    if type(protectgui) == _dwrnz("DxwUFQwEAxs=") then pcall(function() protectgui(_v5d) end) end
+    if type(syn) == _dwrnz("HQgYGh0=") and type(syn.protect_gui) == _dwrnz("DxwUFQwEAxs=") then pcall(function() syn.protect_gui(_v5d) end) end
 end
 
-for _, parent in ipairs({CoreGui, player:FindFirstChild(_dyepe("MwULEhEBPgwB"))}) do
+for _, parent in ipairs({CoreGui, player:FindFirstChild(_dwrnz("OQUbDx0fKwAT"))}) do
     if parent then
-        for _, name in ipairs({_dyepe("OzosNCcwKzA4PjQqNiA="), _dyepe("OyI1Kj0+OzY8NSw4Kg=="), _dyepe("OzosNCMyKzchJCwyJDwj")}) do
+        for _, name in ipairs({_dwrnz("MTo8KSsuPjwqOi4mPCA="), _dwrnz("MSIlNzEgLjouMTY0IA=="), _dwrnz("MTo8KS8sPjszIDY+Ljwz")}) do
             local old = parent:FindFirstChild(name)
             if old then pcall(function() old:Destroy() end) end
         end
     end
 end
 
-local gui = Instance.new(_dyepe("MAoYDhEdPgwB"))
-gui.Name = _dyepe("OzosNCcwKzA4PjQqNiA=")
+local gui = Instance.new(_dwrnz("OgoIEx0DKwAT"))
+gui.Name = _dwrnz("MTo8KSsuPjwqOi4mPCA=")
 gui.ResetOnSpawn = false
 gui.IgnoreGuiInset = true
-gui.DisplayOrder = (100343 - 344)
+gui.DisplayOrder = (100437 - 438)
 protectGui(gui)
 gui.Parent = CoreGui
 
-local main = Instance.new(_dyepe("JRsLBhE="))
-main.Name = _dyepe("LggDBQ==")
-main.Size = UDim2.new(0, (553 - 173), 0, 0)
-main.Position = UDim2.new(0.5, -(369 - 179), 0, (35 - 15))
+local main = Instance.new(_dwrnz("LxsbGx0="))
+main.Name = _dwrnz("JAgTGA==")
+main.Size = UDim2.new(0, (414 - 34), 0, 0)
+main.Position = UDim2.new(0.5, -(357 - 167), 0, (39 - 19))
 main.BackgroundColor3 = THEME.BG
 main.BackgroundTransparency = 0.05
 main.BorderSizePixel = 0
 main.AutomaticSize = Enum.AutomaticSize.Y
 main.Parent = gui
 
-local mainGrad = Instance.new(_dyepe("NiAtGRUXEBwGHg=="))
+local mainGrad = Instance.new(_dwrnz("PCA9BBkJBRAUGg=="))
 mainGrad.Color = ColorSequence.new({
     ColorSequenceKeypoint.new(0, THEME.BG_TOP),
     ColorSequenceKeypoint.new(1, THEME.BG),
 })
-mainGrad.Rotation = (122 - 32)
+mainGrad.Rotation = (126 - 36)
 mainGrad.Parent = main
 
-local stroke = Instance.new(_dyepe("NiA5HwYcEhw="))
+local stroke = Instance.new(_dwrnz("PCApAgoCBxA="))
 stroke.Color = THEME.GREEN
 stroke.Thickness = 1
 stroke.Transparency = 0.7
 stroke.Parent = main
 
-local corner = Instance.new(_dyepe("NiApBAYdHAs="))
-corner.CornerRadius = UDim.new(0, (11 - 3))
+local corner = Instance.new(_dwrnz("PCA5GQoDCQc="))
+corner.CornerRadius = UDim.new(0, (15 - 7))
 corner.Parent = main
 
-local padding = Instance.new(_dyepe("NiA6ChAXEBcP"))
+local padding = Instance.new(_dwrnz("PCAqFxwJBRsd"))
 padding.PaddingTop = UDim.new(0, (17 - 7))
-padding.PaddingBottom = UDim.new(0, (16 - 6))
-padding.PaddingLeft = UDim.new(0, (15 - 3))
-padding.PaddingRight = UDim.new(0, (19 - 7))
+padding.PaddingBottom = UDim.new(0, (20 - 10))
+padding.PaddingLeft = UDim.new(0, (23 - 11))
+padding.PaddingRight = UDim.new(0, (18 - 6))
 padding.Parent = main
 
-local layout = Instance.new(_dyepe("NiAmAgcHNRgRBR4Z"))
+local layout = Instance.new(_dwrnz("PCA2HwsZIBQDAQQV"))
 layout.SortOrder = Enum.SortOrder.LayoutOrder
-layout.Padding = UDim.new(0, (8 - 2))
+layout.Padding = UDim.new(0, (9 - 3))
 layout.Parent = main
 
-local uiscale = Instance.new(_dyepe("NiA5CBUfHA=="))
+local uiscale = Instance.new(_dwrnz("PCApFRkBCQ=="))
 uiscale.Parent = main
 local function updateScale()
     local _v5e = workspace.CurrentCamera
     if not _v5e then return end
     local _v5f = _v5e.ViewportSize
     if _v5f.X < 1 then return end
-    uiscale.Scale = math.clamp(_v5f.X / (1625 - 225), 0.75, 1.10)
+    uiscale.Scale = math.clamp(_v5f.X / (1407 - 7), 0.75, 1.10)
 end
 updateScale()
 if workspace.CurrentCamera then
-    workspace.CurrentCamera:GetPropertyChangedSignal(_dyepe("NQAPHAQcCw07AxEI")):Connect(updateScale)
+    workspace.CurrentCamera:GetPropertyChangedSignal(_dwrnz("PwAfAQgCHgEpBwsE")):Connect(updateScale)
 end
 
-local titleRow = Instance.new(_dyepe("JRsLBhE="))
-titleRow.Size = UDim2.new(1, 0, 0, (36 - 10))
+local titleRow = Instance.new(_dwrnz("LxsbGx0="))
+titleRow.Size = UDim2.new(1, 0, 0, (38 - 12))
 titleRow.BackgroundTransparency = 1
 titleRow.LayoutOrder = 1
 titleRow.Active = true
 titleRow.Parent = main
 
-local dotIcon = Instance.new(_dyepe("JRsLBhE="))
-dotIcon.Size = UDim2.new(0, (11 - 2), 0, (10 - 1))
+local dotIcon = Instance.new(_dwrnz("LxsbGx0="))
+dotIcon.Size = UDim2.new(0, (12 - 3), 0, (16 - 7))
 dotIcon.Position = UDim2.new(0, 0, 0.5, -4.5)
 dotIcon.BackgroundColor3 = THEME.GREEN
 dotIcon.BorderSizePixel = 0
 dotIcon.Parent = titleRow
 
-local diC = Instance.new(_dyepe("NiApBAYdHAs="))
+local diC = Instance.new(_dwrnz("PCA5GQoDCQc="))
 diC.CornerRadius = UDim.new(1, 0)
 diC.Parent = dotIcon
 
-local title = Instance.new(_dyepe("NwwSHzgSGxwE"))
-title.Size = UDim2.new(1, -(258 - 32), 1, 0)
-title.Position = UDim2.new(0, (19 - 3), 0, 0)
+local title = Instance.new(_dwrnz("PQwCAjQMDhAW"))
+title.Size = UDim2.new(1, -(254 - 28), 1, 0)
+title.Position = UDim2.new(0, (32 - 16), 0, 0)
 title.BackgroundTransparency = 1
 title.Font = Enum.Font.GothamBold
-title.TextSize = (30 - 15)
+title.TextSize = (27 - 12)
 title.TextColor3 = THEME.GREEN
 title.TextXAlignment = Enum.TextXAlignment.Left
-title.Text = _dyepe("Ozos")
+title.Text = _dwrnz("MTo8")
 title.Parent = titleRow
 
-local discordBtn = Instance.new(_dyepe("NwwSHzYGDQ0HBA=="))
-discordBtn.Size = UDim2.new(0, (144 - 56), 0, (29 - 9))
-discordBtn.Position = UDim2.new(1, -(169 - 81), 0.5, -(19 - 9))
+local discordBtn = Instance.new(_dwrnz("PQwCAjoYGAEVAA=="))
+discordBtn.Size = UDim2.new(0, (154 - 66), 0, (30 - 10))
+discordBtn.Position = UDim2.new(1, -(171 - 83), 0.5, -(19 - 9))
 discordBtn.BackgroundColor3 = THEME.DISCORD_BG
 discordBtn.BorderSizePixel = 0
 discordBtn.Font = Enum.Font.GothamBold
-discordBtn.TextSize = (21 - 10)
-discordBtn.TextColor3 = Color3.fromRGB((399 - 144), (500 - 245), (427 - 172))
-discordBtn.Text = _dyepe("JwAZCBsBHQ==")
+discordBtn.TextSize = (17 - 6)
+discordBtn.TextColor3 = Color3.fromRGB((339 - 84), (300 - 45), (328 - 73))
+discordBtn.Text = _dwrnz("LQAJFRcfCA==")
 discordBtn.AutoButtonColor = true
 discordBtn.Parent = titleRow
 
-local dcbC = Instance.new(_dyepe("NiApBAYdHAs="))
-dcbC.CornerRadius = UDim.new(0, (5 - 1))
+local dcbC = Instance.new(_dwrnz("PCA5GQoDCQc="))
+dcbC.CornerRadius = UDim.new(0, (6 - 2))
 dcbC.Parent = discordBtn
 
-local dcbS = Instance.new(_dyepe("NiA5HwYcEhw="))
+local dcbS = Instance.new(_dwrnz("PCApAgoCBxA="))
 dcbS.Color = THEME.DISCORD_ST
 dcbS.Thickness = 1
 dcbS.Transparency = 0.5
@@ -1200,7 +1200,7 @@ dcbS.Parent = discordBtn
 local function copyToClipboard(text)
     if setclipboard then local _v5g = pcall(setclipboard, text); if _v5g then return true end end
     if toclipboard then local _v5g = pcall(toclipboard, text); if _v5g then return true end end
-    if syn and type(syn) == _dyepe("FwgIBxE=") and type(syn.write_clipboard) == _dyepe("BRwECAAaFhc=") then
+    if syn and type(syn) == _dwrnz("HQgYGh0=") and type(syn.write_clipboard) == _dwrnz("DxwUFQwEAxs=") then
         local _v5g = pcall(syn.write_clipboard, text); if _v5g then return true end
     end
     return false
@@ -1208,78 +1208,78 @@ end
 
 discordBtn.Activated:Connect(function()
     if copyToClipboard(DISCORD_LINK) then
-        discordBtn.Text = _dyepe("gfX5SzccCRANDg==")
-        discordBtn.BackgroundColor3 = Color3.fromRGB((37 - 2), (265 - 100), (107 - 17))
+        discordBtn.Text = _dwrnz("i/XpVjsCHBwfCg==")
+        discordBtn.BackgroundColor3 = Color3.fromRGB((55 - 20), (248 - 83), (148 - 58))
     else
-        discordBtn.Text = _dyepe("JQgDBxEX")
-        discordBtn.BackgroundColor3 = Color3.fromRGB((288 - 108), (61 - 21), (46 - 6))
+        discordBtn.Text = _dwrnz("LwgTGh0J")
+        discordBtn.BackgroundColor3 = Color3.fromRGB((307 - 127), (48 - 8), (75 - 35))
     end
     task.delay(1.5, function()
         if discordBtn and discordBtn.Parent then
-            discordBtn.Text = _dyepe("JwAZCBsBHQ==")
+            discordBtn.Text = _dwrnz("LQAJFRcfCA==")
             discordBtn.BackgroundColor3 = THEME.DISCORD_BG
         end
     end)
 end)
 
-local notifBtn = Instance.new(_dyepe("NwwSHzYGDQ0HBA=="))
-notifBtn.Size = UDim2.new(0, (120 - 10), 0, (31 - 11))
-notifBtn.Position = UDim2.new(1, -(312 - 110), 0.5, -(18 - 8))
+local notifBtn = Instance.new(_dwrnz("PQwCAjoYGAEVAA=="))
+notifBtn.Size = UDim2.new(0, (113 - 3), 0, (27 - 7))
+notifBtn.Position = UDim2.new(1, -(276 - 74), 0.5, -(16 - 6))
 notifBtn.BackgroundColor3 = THEME.WHITE
 notifBtn.BackgroundTransparency = 0
 notifBtn.BorderSizePixel = 0
 notifBtn.Font = Enum.Font.GothamBold
-notifBtn.TextSize = (14 - 5)
+notifBtn.TextSize = (18 - 9)
 notifBtn.TextColor3 = THEME.DARK_TEXT
-notifBtn.Text = _dyepe("uuyy2qzUoPuwwku1xLDus9GrzaHRssy10rHNs94=")
+notifBtn.Text = _dwrnz("sOyix6DKtfeixlG5zrD+rt212K3Dtta52LHdrtI=")
 notifBtn.AutoButtonColor = false
 notifBtn.Parent = titleRow
 
-local nbC = Instance.new(_dyepe("NiApBAYdHAs="))
-nbC.CornerRadius = UDim.new(0, (7 - 3))
+local nbC = Instance.new(_dwrnz("PCA5GQoDCQc="))
+nbC.CornerRadius = UDim.new(0, (6 - 2))
 nbC.Parent = notifBtn
 
-local nbS = Instance.new(_dyepe("NiA5HwYcEhw="))
-nbS.Color = Color3.fromRGB((387 - 187), (237 - 37), (314 - 114))
+local nbS = Instance.new(_dwrnz("PCApAgoCBxA="))
+nbS.Color = Color3.fromRGB((209 - 9), (343 - 143), (347 - 147))
 nbS.Thickness = 1
 nbS.Transparency = 0.2
 nbS.Parent = notifBtn
 
-local subtitleRow = Instance.new(_dyepe("JRsLBhE="))
-subtitleRow.Size = UDim2.new(1, 0, 0, (19 - 3))
+local subtitleRow = Instance.new(_dwrnz("LxsbGx0="))
+subtitleRow.Size = UDim2.new(1, 0, 0, (25 - 9))
 subtitleRow.BackgroundTransparency = 1
-subtitleRow.LayoutOrder = (4 - 2)
+subtitleRow.LayoutOrder = (3 - 1)
 subtitleRow.Parent = main
 
-local subtitle = Instance.new(_dyepe("NwwSHzgSGxwE"))
-subtitle.Size = UDim2.new(1, -(80 - 10), 1, 0)
+local subtitle = Instance.new(_dwrnz("PQwCAjQMDhAW"))
+subtitle.Size = UDim2.new(1, -(115 - 45), 1, 0)
 subtitle.BackgroundTransparency = 1
 subtitle.Font = Enum.Font.Gotham
-subtitle.TextSize = (24 - 11)
+subtitle.TextSize = (19 - 6)
 subtitle.TextColor3 = THEME.GREEN_SOFT
 subtitle.TextXAlignment = Enum.TextXAlignment.Left
-subtitle.Text = _dyepe("Ozos")
+subtitle.Text = _dwrnz("MTo8")
 subtitle.Parent = subtitleRow
 
 if hasKeyboard then
-    local yHint = Instance.new(_dyepe("NwwSHzgSGxwE"))
-    yHint.Size = UDim2.new(0, (133 - 63), 1, 0)
-    yHint.Position = UDim2.new(1, -(137 - 67), 0, 0)
+    local yHint = Instance.new(_dwrnz("PQwCAjQMDhAW"))
+    yHint.Size = UDim2.new(0, (101 - 31), 1, 0)
+    yHint.Position = UDim2.new(1, -(114 - 44), 0, 0)
     yHint.BackgroundTransparency = 1
     yHint.Font = Enum.Font.GothamBold
-    yHint.TextSize = (16 - 6)
+    yHint.TextSize = (11 - 1)
     yHint.TextColor3 = THEME.GREEN
     yHint.TextXAlignment = Enum.TextXAlignment.Right
-    yHint.Text = _dyepe("OkmyzqzdoPiwzbPM")
+    yHint.Text = _dwrnz("MEmi06DDtfSiyanA")
     yHint.Parent = subtitleRow
 end
 
-local sep = Instance.new(_dyepe("JRsLBhE="))
+local sep = Instance.new(_dwrnz("LxsbGx0="))
 sep.Size = UDim2.new(1, 0, 0, 1)
 sep.BackgroundColor3 = THEME.GREEN_DIM
 sep.BackgroundTransparency = 0.7
 sep.BorderSizePixel = 0
-sep.LayoutOrder = (6 - 3)
+sep.LayoutOrder = (5 - 2)
 sep.Parent = main
 
 local function makeToggleBtn(_v5h, _v5i, _v5j, _v5k, _v5l, _v5m, _v5n)
@@ -1287,12 +1287,12 @@ local function makeToggleBtn(_v5h, _v5i, _v5j, _v5k, _v5l, _v5m, _v5n)
     local _v5o = _v5n.borderColor or THEME.GREEN
     local _v5p = _v5n.dotColor or THEME.GREEN
     local _v5q = _v5n.textColor or THEME.GREEN
-    local _v5r = _v5n.bgOn or Color3.fromRGB((26 - 11), (36 - 1), (37 - 17))
-    local _v5s = _v5n.bgOff or Color3.fromRGB((46 - 21), (29 - 4), (37 - 12))
+    local _v5r = _v5n.bgOn or Color3.fromRGB((20 - 5), (50 - 15), (40 - 20))
+    local _v5s = _v5n.bgOff or Color3.fromRGB((43 - 18), (26 - 1), (36 - 11))
     local _v5t = _v5n.borderTransOn or 0.7
     local _v5u = _v5n.borderTransOff or 0.9
 
-    local _v5v = Instance.new(_dyepe("NwwSHzYGDQ0HBA=="))
+    local _v5v = Instance.new(_dwrnz("PQwCAjoYGAEVAA=="))
     _v5v.Size = _v5i
     _v5v.BackgroundColor3 = _v5l() and _v5r or _v5s
     _v5v.BorderSizePixel = 0
@@ -1301,33 +1301,33 @@ local function makeToggleBtn(_v5h, _v5i, _v5j, _v5k, _v5l, _v5m, _v5n)
     _v5v.AutoButtonColor = false
     _v5v.Parent = _v5h
 
-    local _v5w = Instance.new(_dyepe("NiApBAYdHAs="))
-    _v5w.CornerRadius = UDim.new(0, (12 - 6))
+    local _v5w = Instance.new(_dwrnz("PCA5GQoDCQc="))
+    _v5w.CornerRadius = UDim.new(0, (11 - 5))
     _v5w.Parent = _v5v
 
-    local s = Instance.new(_dyepe("NiA5HwYcEhw="))
+    local s = Instance.new(_dwrnz("PCApAgoCBxA="))
     s.Color = _v5o
     s.Thickness = 1
     s.Transparency = _v5l() and _v5t or _v5u
     s.Parent = _v5v
 
-    local _v5x = Instance.new(_dyepe("JRsLBhE="))
-    _v5x.Size = UDim2.new(0, (11 - 3), 0, (9 - 1))
-    _v5x.Position = UDim2.new(0, (15 - 3), 0.5, -(7 - 3))
-    _v5x.BackgroundColor3 = _v5l() and _v5p or Color3.fromRGB((95 - 25), (82 - 12), (73 - 3))
+    local _v5x = Instance.new(_dwrnz("LxsbGx0="))
+    _v5x.Size = UDim2.new(0, (13 - 5), 0, (14 - 6))
+    _v5x.Position = UDim2.new(0, (14 - 2), 0.5, -(8 - 4))
+    _v5x.BackgroundColor3 = _v5l() and _v5p or Color3.fromRGB((88 - 18), (123 - 53), (127 - 57))
     _v5x.BorderSizePixel = 0
     _v5x.Parent = _v5v
 
-    local _v5y = Instance.new(_dyepe("NiApBAYdHAs="))
+    local _v5y = Instance.new(_dwrnz("PCA5GQoDCQc="))
     _v5y.CornerRadius = UDim.new(1, 0)
     _v5y.Parent = _v5x
 
-    local _v5z = Instance.new(_dyepe("NwwSHzgSGxwE"))
-    _v5z.Size = UDim2.new(1, -(42 - 14), 1, 0)
-    _v5z.Position = UDim2.new(0, (34 - 8), 0, 0)
+    local _v5z = Instance.new(_dwrnz("PQwCAjQMDhAW"))
+    _v5z.Size = UDim2.new(1, -(44 - 16), 1, 0)
+    _v5z.Position = UDim2.new(0, (50 - 24), 0, 0)
     _v5z.BackgroundTransparency = 1
     _v5z.Font = Enum.Font.GothamBold
-    _v5z.TextSize = (24 - 11)
+    _v5z.TextSize = (26 - 13)
     _v5z.TextColor3 = _v5l() and _v5q or THEME.TEXT_OFF
     _v5z.TextXAlignment = Enum.TextXAlignment.Left
     _v5z.Text = _v5k
@@ -1338,128 +1338,128 @@ local function makeToggleBtn(_v5h, _v5i, _v5j, _v5k, _v5l, _v5m, _v5n)
         local _v61 = _v5l()
         _v5v.BackgroundColor3 = _v61 and _v5r or _v5s
         s.Transparency = _v61 and _v5t or _v5u
-        _v5x.BackgroundColor3 = _v61 and _v5p or Color3.fromRGB((115 - 45), (120 - 50), (103 - 33))
+        _v5x.BackgroundColor3 = _v61 and _v5p or Color3.fromRGB((85 - 15), (135 - 65), (103 - 33))
         _v5z.TextColor3 = _v61 and _v5q or THEME.TEXT_OFF
     end)
     return _v5v
 end
 
-local aimRow = Instance.new(_dyepe("JRsLBhE="))
-aimRow.Size = UDim2.new(1, 0, 0, (45 - 7))
+local aimRow = Instance.new(_dwrnz("LxsbGx0="))
+aimRow.Size = UDim2.new(1, 0, 0, (56 - 18))
 aimRow.BackgroundTransparency = 1
 aimRow.LayoutOrder = (5 - 1)
 aimRow.Parent = main
 
-makeToggleBtn(aimRow, UDim2.new(1, 0, 1, 0), 1, _dyepe("u86z4a32WaHAs+O1yQ=="),
+makeToggleBtn(aimRow, UDim2.new(1, 0, 1, 0), 1, _dwrnz("sc6j/KHoTK3St/m5ww=="),
     function() return state.fireOn end,
     function(_v62) state.fireOn = _v62 end)
 
 
-local nofogRow = Instance.new(_dyepe("JRsLBhE="))
-nofogRow.Size = UDim2.new(1, 0, 0, (44 - 6))
+local nofogRow = Instance.new(_dwrnz("LxsbGx0="))
+nofogRow.Size = UDim2.new(1, 0, 0, (64 - 26))
 nofogRow.BackgroundTransparency = 1
 nofogRow.LayoutOrder = (9 - 4)
 nofogRow.Parent = main
 
-local nofogBtn = Instance.new(_dyepe("NwwSHzYGDQ0HBA=="))
+local nofogBtn = Instance.new(_dwrnz("PQwCAjoYGAEVAA=="))
 nofogBtn.Size = UDim2.new(1, 0, 1, 0)
-nofogBtn.BackgroundColor3 = Color3.fromRGB((47 - 17), (54 - 24), (49 - 19))
+nofogBtn.BackgroundColor3 = Color3.fromRGB((44 - 14), (60 - 30), (55 - 25))
 nofogBtn.BorderSizePixel = 0
 nofogBtn.Text = ""
 nofogBtn.AutoButtonColor = false
 nofogBtn.Active = true
 nofogBtn.Parent = nofogRow
 
-local nfC = Instance.new(_dyepe("NiApBAYdHAs="))
-nfC.CornerRadius = UDim.new(0, (12 - 6))
+local nfC = Instance.new(_dwrnz("PCA5GQoDCQc="))
+nfC.CornerRadius = UDim.new(0, (9 - 3))
 nfC.Parent = nofogBtn
 
-local nfS = Instance.new(_dyepe("NiA5HwYcEhw="))
+local nfS = Instance.new(_dwrnz("PCApAgoCBxA="))
 nfS.Color = THEME.GRAY
 nfS.Thickness = 1
 nfS.Transparency = 0.9
 nfS.Parent = nofogBtn
 
-local nfDot = Instance.new(_dyepe("JRsLBhE="))
-nfDot.Size = UDim2.new(0, (12 - 4), 0, (12 - 4))
-nfDot.Position = UDim2.new(0, (20 - 8), 0.5, -(5 - 1))
-nfDot.BackgroundColor3 = Color3.fromRGB((120 - 50), (108 - 38), (101 - 31))
+local nfDot = Instance.new(_dwrnz("LxsbGx0="))
+nfDot.Size = UDim2.new(0, (10 - 2), 0, (15 - 7))
+nfDot.Position = UDim2.new(0, (23 - 11), 0.5, -(8 - 4))
+nfDot.BackgroundColor3 = Color3.fromRGB((113 - 43), (71 - 1), (111 - 41))
 nfDot.BorderSizePixel = 0
 nfDot.Parent = nofogBtn
 
-local nfDotC = Instance.new(_dyepe("NiApBAYdHAs="))
+local nfDotC = Instance.new(_dwrnz("PCA5GQoDCQc="))
 nfDotC.CornerRadius = UDim.new(1, 0)
 nfDotC.Parent = nfDot
 
-local nfLbl = Instance.new(_dyepe("NwwSHzgSGxwE"))
-nfLbl.Size = UDim2.new(1, -(36 - 8), 1, 0)
-nfLbl.Position = UDim2.new(0, (52 - 26), 0, 0)
+local nfLbl = Instance.new(_dwrnz("PQwCAjQMDhAW"))
+nfLbl.Size = UDim2.new(1, -(54 - 26), 1, 0)
+nfLbl.Position = UDim2.new(0, (33 - 7), 0, 0)
 nfLbl.BackgroundTransparency = 1
 nfLbl.Font = Enum.Font.GothamBold
-nfLbl.TextSize = (21 - 8)
+nfLbl.TextSize = (16 - 3)
 nfLbl.TextColor3 = THEME.TEXT_OFF
 nfLbl.TextXAlignment = Enum.TextXAlignment.Left
-nfLbl.Text = _dyepe("u8yy2azUoP2ww0u1xLDus8Kr0aHPssM=")
+nfLbl.Text = _dwrnz("scyixKDKtfGix1G5zrD+rs61xK3dttk=")
 nfLbl.Parent = nofogBtn
 
 nofogBtn.Activated:Connect(function()
     if not nofogBtn.Active then return end
     startNoFog()
     nofogBtn.Active = false
-    nofogBtn.BackgroundColor3 = Color3.fromRGB((16 - 1), (43 - 8), (21 - 1))
+    nofogBtn.BackgroundColor3 = Color3.fromRGB((29 - 14), (44 - 9), (30 - 10))
     nfS.Color = THEME.GREEN
     nfS.Transparency = 0.7
     nfDot.BackgroundColor3 = THEME.GREEN
     nfLbl.TextColor3 = THEME.GREEN
-    nfLbl.Text = _dyepe("u8Oz7lSr06DpstK06bDuS6zWocuwzbLpu8BKs9Oq/aHessO1xLHC")
+    nfLbl.Text = _dwrnz("scOj81i1xqz7tsi447D+VqDItMeiyajlscBart+06K3Mttm5zrHS")
 end)
 
 
-local vfarmRow = Instance.new(_dyepe("JRsLBhE="))
-vfarmRow.Size = UDim2.new(1, 0, 0, (66 - 28))
+local vfarmRow = Instance.new(_dwrnz("LxsbGx0="))
+vfarmRow.Size = UDim2.new(1, 0, 0, (50 - 12))
 vfarmRow.BackgroundTransparency = 1
-vfarmRow.LayoutOrder = (7 - 1)
+vfarmRow.LayoutOrder = (12 - 6)
 vfarmRow.Parent = main
 
-vfarmBtn = Instance.new(_dyepe("NwwSHzYGDQ0HBA=="))
+vfarmBtn = Instance.new(_dwrnz("PQwCAjoYGAEVAA=="))
 vfarmBtn.Size = UDim2.new(1, 0, 1, 0)
-vfarmBtn.BackgroundColor3 = Color3.fromRGB((36 - 11), (49 - 24), (39 - 14))
+vfarmBtn.BackgroundColor3 = Color3.fromRGB((35 - 10), (40 - 15), (49 - 24))
 vfarmBtn.BorderSizePixel = 0
 vfarmBtn.Text = ""
 vfarmBtn.AutoButtonColor = false
 vfarmBtn.Active = true
 vfarmBtn.Parent = vfarmRow
 
-local vfc = Instance.new(_dyepe("NiApBAYdHAs="))
-vfc.CornerRadius = UDim.new(0, (11 - 5))
+local vfc = Instance.new(_dwrnz("PCA5GQoDCQc="))
+vfc.CornerRadius = UDim.new(0, (12 - 6))
 vfc.Parent = vfarmBtn
 
-vfarmBtnStroke = Instance.new(_dyepe("NiA5HwYcEhw="))
+vfarmBtnStroke = Instance.new(_dwrnz("PCApAgoCBxA="))
 vfarmBtnStroke.Color = THEME.CYAN
 vfarmBtnStroke.Thickness = 1
 vfarmBtnStroke.Transparency = 0.6
 vfarmBtnStroke.Parent = vfarmBtn
 
-vfarmBtnDot = Instance.new(_dyepe("JRsLBhE="))
-vfarmBtnDot.Size = UDim2.new(0, (13 - 5), 0, (14 - 6))
-vfarmBtnDot.Position = UDim2.new(0, (15 - 3), 0.5, -(8 - 4))
+vfarmBtnDot = Instance.new(_dwrnz("LxsbGx0="))
+vfarmBtnDot.Size = UDim2.new(0, (9 - 1), 0, (14 - 6))
+vfarmBtnDot.Position = UDim2.new(0, (21 - 9), 0.5, -(7 - 3))
 vfarmBtnDot.BackgroundColor3 = THEME.CYAN
 vfarmBtnDot.BorderSizePixel = 0
 vfarmBtnDot.Parent = vfarmBtn
 
-local vfdc = Instance.new(_dyepe("NiApBAYdHAs="))
+local vfdc = Instance.new(_dwrnz("PCA5GQoDCQc="))
 vfdc.CornerRadius = UDim.new(1, 0)
 vfdc.Parent = vfarmBtnDot
 
-vfarmBtnLabel = Instance.new(_dyepe("NwwSHzgSGxwE"))
-vfarmBtnLabel.Size = UDim2.new(1, -(43 - 15), 1, 0)
-vfarmBtnLabel.Position = UDim2.new(0, (52 - 26), 0, 0)
+vfarmBtnLabel = Instance.new(_dwrnz("PQwCAjQMDhAW"))
+vfarmBtnLabel.Size = UDim2.new(1, -(38 - 10), 1, 0)
+vfarmBtnLabel.Position = UDim2.new(0, (36 - 10), 0, 0)
 vfarmBtnLabel.BackgroundTransparency = 1
 vfarmBtnLabel.Font = Enum.Font.GothamBold
-vfarmBtnLabel.TextSize = (19 - 6)
+vfarmBtnLabel.TextSize = (15 - 2)
 vfarmBtnLabel.TextColor3 = THEME.CYAN
 vfarmBtnLabel.TextXAlignment = Enum.TextXAlignment.Left
-vfarmBtnLabel.Text = _dyepe("uuuywa33WaHPs++11bHCs9Oq/1mwwrPKuu2y2K35od6w27LqQ7HCs8Cq+qDsSrPHuu2z6azUod+x4A==")
+vfarmBtnLabel.Text = _dwrnz("sOui3KHpTK3dt/W537HSrt+06lWixqnGsO2ixaHntNKi36jmSbHSrsy076z+TqnLsO2j9KDKtNOj5A==")
 vfarmBtnLabel.Parent = vfarmBtn
 
 
@@ -1479,18 +1479,18 @@ local function showVehicleWarning()
     end
     if warningGuiRef then return end
 
-    local _v63 = Instance.new(_dyepe("MAoYDhEdPgwB"))
-    _v63.Name = _dyepe("OzosNCMyKzchJCwyJDwj")
+    local _v63 = Instance.new(_dwrnz("OgoIEx0DKwAT"))
+    _v63.Name = _dwrnz("MTo8KS8sPjszIDY+Ljwz")
     _v63.ResetOnSpawn = false
     _v63.IgnoreGuiInset = true
-    _v63.DisplayOrder = (100276 - 276)
+    _v63.DisplayOrder = (100249 - 249)
     _v63.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     protectGui(_v63)
     _v63.Parent = CoreGui
     warningGuiRef = _v63
 
-    local _v64 = Instance.new(_dyepe("NwwSHzYGDQ0HBA=="))
-    _v64.Name = _dyepe("IQgJABABFgk=")
+    local _v64 = Instance.new(_dwrnz("PQwCAjoYGAEVAA=="))
+    _v64.Name = _dwrnz("KwgZHRwfAwU=")
     _v64.Size = UDim2.new(1, 0, 1, 0)
     _v64.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     _v64.BackgroundTransparency = 0.4
@@ -1500,108 +1500,108 @@ local function showVehicleWarning()
     _v64.ZIndex = 1
     _v64.Parent = _v63
 
-    local _v65 = Instance.new(_dyepe("JRsLBhE="))
-    _v65.Name = _dyepe("JwALBxsU")
-    _v65.Size = UDim2.new(0, (649 - 169), 0, (488 - 88))
-    _v65.Position = UDim2.new(0.5, -(420 - 180), 0.5, -(391 - 191))
-    _v65.BackgroundColor3 = Color3.fromRGB((23 - 3), 0, 0)
+    local _v65 = Instance.new(_dwrnz("LxsbGx0="))
+    _v65.Name = _dwrnz("LQAbGhcK")
+    _v65.Size = UDim2.new(0, (667 - 187), 0, (642 - 242))
+    _v65.Position = UDim2.new(0.5, -(403 - 163), 0.5, -(359 - 159))
+    _v65.BackgroundColor3 = Color3.fromRGB((24 - 4), 0, 0)
     _v65.BackgroundTransparency = 0
     _v65.BorderSizePixel = 0
-    _v65.ZIndex = (7 - 2)
+    _v65.ZIndex = (8 - 3)
     _v65.Parent = _v63
 
-    local _v66 = Instance.new(_dyepe("NiAtGRUXEBwGHg=="))
+    local _v66 = Instance.new(_dwrnz("PCA9BBkJBRAUGg=="))
     _v66.Color = ColorSequence.new({
-        ColorSequenceKeypoint.new(0, Color3.fromRGB((72 - 27), 0, 0)),
-        ColorSequenceKeypoint.new(1, Color3.fromRGB((17 - 7), 0, 0)),
+        ColorSequenceKeypoint.new(0, Color3.fromRGB((62 - 17), 0, 0)),
+        ColorSequenceKeypoint.new(1, Color3.fromRGB((19 - 9), 0, 0)),
     })
-    _v66.Rotation = (149 - 59)
+    _v66.Rotation = (136 - 46)
     _v66.Parent = _v65
 
-    local _v67 = Instance.new(_dyepe("NiA5HwYcEhw="))
+    local _v67 = Instance.new(_dwrnz("PCApAgoCBxA="))
     _v67.Color = THEME.RED
     _v67.Thickness = (3 - 1)
     _v67.Transparency = 0.1
     _v67.Parent = _v65
 
-    local _v68 = Instance.new(_dyepe("NiApBAYdHAs="))
+    local _v68 = Instance.new(_dwrnz("PCA5GQoDCQc="))
     _v68.CornerRadius = UDim.new(0, (23 - 11))
     _v68.Parent = _v65
 
-    local _v69 = Instance.new(_dyepe("NwwSHzgSGxwE"))
-    _v69.Size = UDim2.new(1, -(78 - 38), 0, (63 - 21))
-    _v69.Position = UDim2.new(0, (35 - 15), 0, (21 - 1))
+    local _v69 = Instance.new(_dwrnz("PQwCAjQMDhAW"))
+    _v69.Size = UDim2.new(1, -(58 - 18), 0, (54 - 12))
+    _v69.Position = UDim2.new(0, (36 - 16), 0, (39 - 19))
     _v69.BackgroundTransparency = 1
     _v69.Font = Enum.Font.GothamBlack
-    _v69.TextSize = (37 - 7)
+    _v69.TextSize = (35 - 5)
     _v69.TextColor3 = THEME.RED
     _v69.TextStrokeTransparency = 0
     _v69.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
-    _v69.Text = _dyepe("gfPKS6zZodSw2rLnu9hKie7T")
-    _v69.ZIndex = (20 - 10)
+    _v69.Text = _dwrnz("i/PaVqDHtNii3qjrsdhalOLN")
+    _v69.ZIndex = (16 - 6)
     _v69.Parent = _v65
 
-    local _v6a = Instance.new(_dyepe("NwwSHzgSGxwE"))
-    _v6a.Size = UDim2.new(1, -(74 - 34), 0, (265 - 55))
-    _v6a.Position = UDim2.new(0, (27 - 7), 0, (133 - 61))
+    local _v6a = Instance.new(_dwrnz("PQwCAjQMDhAW"))
+    _v6a.Size = UDim2.new(1, -(44 - 4), 0, (263 - 53))
+    _v6a.Position = UDim2.new(0, (33 - 13), 0, (115 - 43))
     _v6a.BackgroundTransparency = 1
     _v6a.Font = Enum.Font.GothamBold
-    _v6a.TextSize = (19 - 2)
-    _v6a.TextColor3 = Color3.fromRGB((497 - 242), (112 - 12), (185 - 85))
+    _v6a.TextSize = (22 - 5)
+    _v6a.TextColor3 = Color3.fromRGB((452 - 197), (136 - 36), (169 - 69))
     _v6a.TextWrapped = true
     _v6a.TextXAlignment = Enum.TextXAlignment.Center
     _v6a.TextYAlignment = Enum.TextYAlignment.Top
-    _v6a.Text = _dyepe("uu6y2635WaHPs++05rDgs8aq/lmx77Louuqz7VSr06HbssO1y0mz763wWaHAssy05bHFYX4=") ..
-                 _dyepe("u86y2KzZodewxbLouu6yzFSr0aHPs++10LDgs8Wq+KHZssy1yUmyzK33odewzbPYuu5KsvWq+6HfYGE=") ..
-                 _dyepe("u86y2q3wodFIssy057HZsv6r3qHZs+xNuuGyzKzdociwxku05rDsS6zUoP2w3rPFu86z6H6q/aHCs+q12rD7svBTod6x7rLouuOy2a30c3M=") ..
-                 _dyepe("uuyz76zUodSw0rPEWUmz4a38oPiw3LL8uu1Ksvar06DsSrPKuu2y3azbod6x7Eu1xLDus9qryKHPs+q06bHDS34=") ..
-                 _dyepe("uu2yyK31WaHFsse05rDts9NToPqwwrLnu9hKsvyq/KHPstq1zkmywazFoPOw00u1xLDgS6zEoP2x6LPETQ==")
-    _v6a.ZIndex = (13 - 3)
+    _v6a.Text = _dwrnz("sO6ixqHnTK3dt/W47LDwrsq061Wj66jksOqj8Fi1xq3Jttm5wUmj8qHuTK3Stta477HVfHI=") ..
+                 _dwrnz("sc6ixaDHtNuiwajksO6i0Vi1xK3dt/W52rDwrsm07a3Ltta5w0mi0aHptNuiyanUsO5ar/m07q3NZHs=") ..
+                 _dwrnz("sc6ix6HutN1atta47bHJr/K1y63Lt/ZBsOGi0aDDtMSiwlG47LD8VqDKtfGi2qnJsc6j9XK06K3Qt/C50LDrr/xNtNKj6qjksOOixKHqZn8=") ..
+                 _dwrnz("sOyj8qDKtNii1qnIU0mj/KHitfSi2KjwsO1ar/q1xqz+TqnGsO2iwKDFtNKj6FG5zrD+rta13a3dt/C447HTVnI=") ..
+                 _dwrnz("sO2i1aHrTK3Xtt247LD9rt9Ntfaixqjrsdhar/C06a3dtsC5xEmi3KDbtf+i11G5zrDwVqDatfGj7KnIRw==")
+    _v6a.ZIndex = (17 - 7)
     _v6a.Parent = _v65
 
-    local _v6b = Instance.new(_dyepe("NwwSHzYGDQ0HBA=="))
-    _v6b.Size = UDim2.new(0.5, -(50 - 20), 0, (119 - 59))
-    _v6b.Position = UDim2.new(0, (37 - 17), 1, -(106 - 26))
-    _v6b.BackgroundColor3 = Color3.fromRGB((131 - 11), (36 - 6), (43 - 13))
+    local _v6b = Instance.new(_dwrnz("PQwCAjoYGAEVAA=="))
+    _v6b.Size = UDim2.new(0.5, -(52 - 22), 0, (68 - 8))
+    _v6b.Position = UDim2.new(0, (23 - 3), 1, -(100 - 20))
+    _v6b.BackgroundColor3 = Color3.fromRGB((219 - 99), (52 - 22), (41 - 11))
     _v6b.BorderSizePixel = 0
     _v6b.Font = Enum.Font.GothamBold
-    _v6b.TextSize = (39 - 19)
-    _v6b.TextColor3 = Color3.fromRGB((442 - 187), (500 - 245), (321 - 66))
-    _v6b.Text = _dyepe("u8yz76zJod6wyw==")
+    _v6b.TextSize = (32 - 12)
+    _v6b.TextColor3 = Color3.fromRGB((286 - 31), (408 - 153), (472 - 217))
+    _v6b.Text = _dwrnz("scyj8qDXtNKizw==")
     _v6b.AutoButtonColor = true
-    _v6b.ZIndex = (28 - 8)
+    _v6b.ZIndex = (36 - 16)
     _v6b.Parent = _v65
 
-    local _v6c = Instance.new(_dyepe("NiApBAYdHAs="))
-    _v6c.CornerRadius = UDim.new(0, (12 - 4))
+    local _v6c = Instance.new(_dwrnz("PCA5GQoDCQc="))
+    _v6c.CornerRadius = UDim.new(0, (13 - 5))
     _v6c.Parent = _v6b
 
-    local _v6d = Instance.new(_dyepe("NiA5HwYcEhw="))
+    local _v6d = Instance.new(_dwrnz("PCApAgoCBxA="))
     _v6d.Color = THEME.RED
-    _v6d.Thickness = (3 - 1)
+    _v6d.Thickness = (4 - 2)
     _v6d.Transparency = 0.3
     _v6d.Parent = _v6b
 
-    local _v6e = Instance.new(_dyepe("NwwSHzYGDQ0HBA=="))
-    _v6e.Size = UDim2.new(0.5, -(47 - 17), 0, (69 - 9))
-    _v6e.Position = UDim2.new(0.5, (17 - 7), 1, -(130 - 50))
-    _v6e.BackgroundColor3 = Color3.fromRGB((42 - 12), (181 - 51), (46 - 6))
+    local _v6e = Instance.new(_dwrnz("PQwCAjoYGAEVAA=="))
+    _v6e.Size = UDim2.new(0.5, -(48 - 18), 0, (117 - 57))
+    _v6e.Position = UDim2.new(0.5, (13 - 3), 1, -(136 - 56))
+    _v6e.BackgroundColor3 = Color3.fromRGB((56 - 26), (257 - 127), (50 - 10))
     _v6e.BorderSizePixel = 0
     _v6e.Font = Enum.Font.GothamBold
-    _v6e.TextSize = (35 - 15)
-    _v6e.TextColor3 = Color3.fromRGB((510 - 255), (337 - 82), (394 - 139))
-    _v6e.Text = _dyepe("u8Oz6qzKoPOx7g==")
+    _v6e.TextSize = (32 - 12)
+    _v6e.TextColor3 = Color3.fromRGB((485 - 230), (455 - 200), (262 - 7))
+    _v6e.Text = _dwrnz("scOj96DUtf+j6g==")
     _v6e.AutoButtonColor = true
-    _v6e.ZIndex = (40 - 20)
+    _v6e.ZIndex = (32 - 12)
     _v6e.Parent = _v65
 
-    local _v6f = Instance.new(_dyepe("NiApBAYdHAs="))
+    local _v6f = Instance.new(_dwrnz("PCA5GQoDCQc="))
     _v6f.CornerRadius = UDim.new(0, (15 - 7))
     _v6f.Parent = _v6e
 
-    local _v6g = Instance.new(_dyepe("NiA5HwYcEhw="))
+    local _v6g = Instance.new(_dwrnz("PCApAgoCBxA="))
     _v6g.Color = THEME.GREEN
-    _v6g.Thickness = (3 - 1)
+    _v6g.Thickness = (4 - 2)
     _v6g.Transparency = 0.3
     _v6g.Parent = _v6e
 
@@ -1628,8 +1628,8 @@ vfarmBtn.Activated:Connect(function()
 end)
 
 
-local espWrapper = Instance.new(_dyepe("JRsLBhE="))
-espWrapper.Name = _dyepe("Jjo6PAYSCQkNGA==")
+local espWrapper = Instance.new(_dwrnz("LxsbGx0="))
+espWrapper.Name = _dwrnz("LDoqIQoMHAUfHA==")
 espWrapper.Size = UDim2.new(1, 0, 0, 0)
 espWrapper.AutomaticSize = Enum.AutomaticSize.Y
 espWrapper.BackgroundTransparency = 1
@@ -1637,13 +1637,13 @@ espWrapper.BorderSizePixel = 0
 espWrapper.LayoutOrder = (13 - 6)
 espWrapper.Parent = main
 
-local espWrapperLayout = Instance.new(_dyepe("NiAmAgcHNRgRBR4Z"))
+local espWrapperLayout = Instance.new(_dwrnz("PCA2HwsZIBQDAQQV"))
 espWrapperLayout.SortOrder = Enum.SortOrder.LayoutOrder
-espWrapperLayout.Padding = UDim.new(0, (11 - 5))
+espWrapperLayout.Padding = UDim.new(0, (9 - 3))
 espWrapperLayout.Parent = espWrapper
 
-local sectionA = Instance.new(_dyepe("JRsLBhE="))
-sectionA.Name = _dyepe("MAwJHx0cFzg3Plo5Vw==")
+local sectionA = Instance.new(_dwrnz("LxsbGx0="))
+sectionA.Name = _dwrnz("OgwZAhECAjQlOkA1XQ==")
 sectionA.Size = UDim2.new(1, 0, 0, 0)
 sectionA.AutomaticSize = Enum.AutomaticSize.Y
 sectionA.BackgroundTransparency = 1
@@ -1651,145 +1651,145 @@ sectionA.BorderSizePixel = 0
 sectionA.LayoutOrder = 1
 sectionA.Parent = espWrapper
 
-local sectionALayout = Instance.new(_dyepe("NiAmAgcHNRgRBR4Z"))
+local sectionALayout = Instance.new(_dwrnz("PCA2HwsZIBQDAQQV"))
 sectionALayout.SortOrder = Enum.SortOrder.LayoutOrder
-sectionALayout.Padding = UDim.new(0, (10 - 4))
+sectionALayout.Padding = UDim.new(0, (12 - 6))
 sectionALayout.Parent = sectionA
 
-local rowA1 = Instance.new(_dyepe("JRsLBhE="))
-rowA1.Name = _dyepe("MQYdKkU=")
-rowA1.Size = UDim2.new(1, 0, 0, (61 - 25))
+local rowA1 = Instance.new(_dwrnz("LxsbGx0="))
+rowA1.Name = _dwrnz("OwYNN0k=")
+rowA1.Size = UDim2.new(1, 0, 0, (38 - 2))
 rowA1.BackgroundTransparency = 1
 rowA1.LayoutOrder = 1
 rowA1.Parent = sectionA
 
-local rowA1Layout = Instance.new(_dyepe("NiAmAgcHNRgRBR4Z"))
+local rowA1Layout = Instance.new(_dwrnz("PCA2HwsZIBQDAQQV"))
 rowA1Layout.FillDirection = Enum.FillDirection.Horizontal
 rowA1Layout.SortOrder = Enum.SortOrder.LayoutOrder
-rowA1Layout.Padding = UDim.new(0, (8 - 2))
+rowA1Layout.Padding = UDim.new(0, (11 - 5))
 rowA1Layout.Parent = rowA1
 
-makeToggleBtn(rowA1, UDim2.new(0.5, -(4 - 1), 1, 0), 1, _dyepe("u9CyzKzcoPM="),
+makeToggleBtn(rowA1, UDim2.new(0.5, -(6 - 3), 1, 0), 1, _dwrnz("sdCi0aDCtf8="),
     function() return state.espT1On end,
     function(_v6h) state.espT1On = _v6h end,
     { borderColor = THEME.GRAY, dotColor = THEME.GRAY, textColor = THEME.GRAY,
-      bgOn = Color3.fromRGB((39 - 9), (53 - 23), (48 - 18)), bgOff = Color3.fromRGB((44 - 19), (50 - 25), (30 - 5)),
+      bgOn = Color3.fromRGB((44 - 14), (35 - 5), (33 - 3)), bgOff = Color3.fromRGB((42 - 17), (26 - 1), (41 - 16)),
       borderTransOn = 0.7, borderTransOff = 0.9 })
 
-makeToggleBtn(rowA1, UDim2.new(0.5, -(5 - 2), 1, 0), (4 - 2), _dyepe("uuyz7q35ocs="),
+makeToggleBtn(rowA1, UDim2.new(0.5, -(4 - 1), 1, 0), (3 - 1), _dwrnz("sOyj86HntMc="),
     function() return state.espT2On end,
     function(_v6i) state.espT2On = _v6i end,
     { borderColor = THEME.GREEN, dotColor = THEME.GREEN, textColor = THEME.GREEN,
-      bgOn = Color3.fromRGB((17 - 2), (53 - 18), (40 - 20)), bgOff = Color3.fromRGB((36 - 11), (30 - 5), (49 - 24)),
+      bgOn = Color3.fromRGB((25 - 10), (68 - 33), (32 - 12)), bgOff = Color3.fromRGB((49 - 24), (36 - 11), (43 - 18)),
       borderTransOn = 0.7, borderTransOff = 0.9 })
 
-local rowA2 = Instance.new(_dyepe("JRsLBhE="))
-rowA2.Name = _dyepe("MQYdKkY=")
-rowA2.Size = UDim2.new(1, 0, 0, (60 - 24))
+local rowA2 = Instance.new(_dwrnz("LxsbGx0="))
+rowA2.Name = _dwrnz("OwYNN0o=")
+rowA2.Size = UDim2.new(1, 0, 0, (64 - 28))
 rowA2.BackgroundTransparency = 1
-rowA2.LayoutOrder = (3 - 1)
+rowA2.LayoutOrder = (4 - 2)
 rowA2.Parent = sectionA
 
-local rowA2Layout = Instance.new(_dyepe("NiAmAgcHNRgRBR4Z"))
+local rowA2Layout = Instance.new(_dwrnz("PCA2HwsZIBQDAQQV"))
 rowA2Layout.FillDirection = Enum.FillDirection.Horizontal
 rowA2Layout.SortOrder = Enum.SortOrder.LayoutOrder
-rowA2Layout.Padding = UDim.new(0, (10 - 4))
+rowA2Layout.Padding = UDim.new(0, (11 - 5))
 rowA2Layout.Parent = rowA2
 
-makeToggleBtn(rowA2, UDim2.new(0.5, -(6 - 3), 1, 0), 1, _dyepe("uu+yzKzcocg="),
+makeToggleBtn(rowA2, UDim2.new(0.5, -(5 - 2), 1, 0), 1, _dwrnz("sO+i0aDCtMQ="),
     function() return state.espT3On end,
     function(_v6j) state.espT3On = _v6j end,
     { borderColor = THEME.BLUE, dotColor = THEME.BLUE, textColor = THEME.BLUE,
-      bgOn = Color3.fromRGB((17 - 7), (43 - 18), (69 - 24)), bgOff = Color3.fromRGB((29 - 4), (44 - 19), (40 - 15)),
+      bgOn = Color3.fromRGB((20 - 10), (34 - 9), (51 - 6)), bgOff = Color3.fromRGB((28 - 3), (30 - 5), (26 - 1)),
       borderTransOn = 0.6, borderTransOff = 0.9 })
 
-makeToggleBtn(rowA2, UDim2.new(0.5, -(6 - 3), 1, 0), (3 - 1), _dyepe("uuiyzKzdocg="),
+makeToggleBtn(rowA2, UDim2.new(0.5, -(5 - 2), 1, 0), (3 - 1), _dwrnz("sOii0aDDtMQ="),
     function() return state.espT4On end,
     function(_v6k) state.espT4On = _v6k end,
     { borderColor = THEME.PURPLE, dotColor = THEME.PURPLE, textColor = THEME.PURPLE,
-      bgOn = Color3.fromRGB((49 - 19), (20 - 10), (66 - 26)), bgOff = Color3.fromRGB((33 - 8), (45 - 20), (29 - 4)),
+      bgOn = Color3.fromRGB((37 - 7), (20 - 10), (63 - 23)), bgOff = Color3.fromRGB((44 - 19), (32 - 7), (45 - 20)),
       borderTransOn = 0.6, borderTransOff = 0.9 })
 
-local sectionB = Instance.new(_dyepe("JRsLBhE="))
-sectionB.Name = _dyepe("MAwJHx0cFzs3Pl45VQ==")
-sectionB.Size = UDim2.new(1, 0, 0, (42 - 6))
+local sectionB = Instance.new(_dwrnz("LxsbGx0="))
+sectionB.Name = _dwrnz("OgwZAhECAjclOkQ1Xw==")
+sectionB.Size = UDim2.new(1, 0, 0, (66 - 30))
 sectionB.BackgroundTransparency = 1
 sectionB.BorderSizePixel = 0
-sectionB.LayoutOrder = (4 - 2)
+sectionB.LayoutOrder = (3 - 1)
 sectionB.Parent = espWrapper
 
-local sectionBLayout = Instance.new(_dyepe("NiAmAgcHNRgRBR4Z"))
+local sectionBLayout = Instance.new(_dwrnz("PCA2HwsZIBQDAQQV"))
 sectionBLayout.FillDirection = Enum.FillDirection.Horizontal
 sectionBLayout.SortOrder = Enum.SortOrder.LayoutOrder
 sectionBLayout.Padding = UDim.new(0, (11 - 5))
 sectionBLayout.Parent = sectionB
 
-makeToggleBtn(sectionB, UDim2.new(0.5, -(5 - 1), 1, 0), 1, _dyepe("u86y2KzEoPGw27Ln"),
+makeToggleBtn(sectionB, UDim2.new(0.5, -(7 - 3), 1, 0), 1, _dwrnz("sc6ixaDatf2i36jr"),
     function() return state.espT5On end,
     function(_v6l) state.espT5On = _v6l end,
     { borderColor = THEME.GOLD, dotColor = THEME.GOLD, textColor = THEME.GOLD,
-      bgOn = Color3.fromRGB((43 - 13), (42 - 17), (9 - 4)), bgOff = Color3.fromRGB((40 - 15), (35 - 10), (27 - 2)),
+      bgOn = Color3.fromRGB((36 - 6), (26 - 1), (8 - 3)), bgOff = Color3.fromRGB((44 - 19), (34 - 9), (48 - 23)),
       borderTransOn = 0.6, borderTransOff = 0.9 })
 
-makeToggleBtn(sectionB, UDim2.new(0.25, -(5 - 1), 1, 0), (3 - 1), _dyepe("u8ey2qzUoPix4A=="),
+makeToggleBtn(sectionB, UDim2.new(0.25, -(6 - 2), 1, 0), (3 - 1), _dwrnz("sceix6DKtfSj5A=="),
     function() return state.espT6On end,
     function(_v6m) state.espT6On = _v6m end,
     { borderColor = THEME.RED, dotColor = THEME.RED, textColor = THEME.RED,
-      bgOn = Color3.fromRGB((60 - 25), (13 - 3), (12 - 2)), bgOff = Color3.fromRGB((36 - 11), (31 - 6), (46 - 21)),
+      bgOn = Color3.fromRGB((70 - 35), (18 - 8), (13 - 3)), bgOff = Color3.fromRGB((32 - 7), (45 - 20), (46 - 21)),
       borderTransOn = 0.6, borderTransOff = 0.9 })
 
-local rainbowBtn = Instance.new(_dyepe("NwwSHzYGDQ0HBA=="))
-rainbowBtn.Size = UDim2.new(0.25, -(5 - 1), 1, 0)
-rainbowBtn.BackgroundColor3 = Color3.fromRGB((46 - 11), (14 - 4), (16 - 6))
+local rainbowBtn = Instance.new(_dwrnz("PQwCAjoYGAEVAA=="))
+rainbowBtn.Size = UDim2.new(0.25, -(6 - 2), 1, 0)
+rainbowBtn.BackgroundColor3 = Color3.fromRGB((43 - 8), (19 - 9), (12 - 2))
 rainbowBtn.BorderSizePixel = 0
 rainbowBtn.Text = ""
-rainbowBtn.LayoutOrder = (6 - 3)
+rainbowBtn.LayoutOrder = (4 - 1)
 rainbowBtn.AutoButtonColor = false
 rainbowBtn.Parent = sectionB
 
-local rbc = Instance.new(_dyepe("NiApBAYdHAs="))
+local rbc = Instance.new(_dwrnz("PCA5GQoDCQc="))
 rbc.CornerRadius = UDim.new(0, (8 - 2))
 rbc.Parent = rainbowBtn
 
-local rbs = Instance.new(_dyepe("NiA5HwYcEhw="))
+local rbs = Instance.new(_dwrnz("PCApAgoCBxA="))
 rbs.Color = THEME.RED
 rbs.Thickness = 1
 rbs.Transparency = 0.6
 rbs.Parent = rainbowBtn
 
-local rDot = Instance.new(_dyepe("JRsLBhE="))
-rDot.Size = UDim2.new(0, (15 - 7), 0, (15 - 7))
-rDot.Position = UDim2.new(0, (14 - 2), 0.5, -(5 - 1))
-rDot.BackgroundColor3 = Color3.fromRGB((509 - 254), (372 - 117), (442 - 187))
+local rDot = Instance.new(_dwrnz("LxsbGx0="))
+rDot.Size = UDim2.new(0, (15 - 7), 0, (10 - 2))
+rDot.Position = UDim2.new(0, (15 - 3), 0.5, -(8 - 4))
+rDot.BackgroundColor3 = Color3.fromRGB((381 - 126), (277 - 22), (377 - 122))
 rDot.BorderSizePixel = 0
 rDot.Parent = rainbowBtn
 
-local rdc = Instance.new(_dyepe("NiApBAYdHAs="))
+local rdc = Instance.new(_dwrnz("PCA5GQoDCQc="))
 rdc.CornerRadius = UDim.new(1, 0)
 rdc.Parent = rDot
 
-local rDotGrad = Instance.new(_dyepe("NiAtGRUXEBwGHg=="))
+local rDotGrad = Instance.new(_dwrnz("PCA9BBkJBRAUGg=="))
 rDotGrad.Color = getSmoothRainbow()
 rDotGrad.Parent = rDot
 
-local rLbl = Instance.new(_dyepe("NwwSHzgSGxwE"))
-rLbl.Size = UDim2.new(1, -(39 - 11), 1, 0)
-rLbl.Position = UDim2.new(0, (44 - 18), 0, 0)
+local rLbl = Instance.new(_dwrnz("PQwCAjQMDhAW"))
+rLbl.Size = UDim2.new(1, -(48 - 20), 1, 0)
+rLbl.Position = UDim2.new(0, (52 - 26), 0, 0)
 rLbl.BackgroundTransparency = 1
 rLbl.Font = Enum.Font.GothamBold
 rLbl.TextSize = (18 - 5)
 rLbl.TextColor3 = THEME.RED
 rLbl.TextXAlignment = Enum.TextXAlignment.Left
-rLbl.Text = _dyepe("u8ey2qzUoPix4Eu05bHNs9uryA==")
+rLbl.Text = _dwrnz("sceix6DKtfSj5FG477Hdrte13Q==")
 rLbl.Parent = rainbowBtn
 
 rainbowBtn.Activated:Connect(function()
     state.targetOn = not state.targetOn
     local _v6n = state.targetOn
-    rainbowBtn.BackgroundColor3 = _v6n and Color3.fromRGB((43 - 8), (15 - 5), (14 - 4)) or Color3.fromRGB((40 - 15), (49 - 24), (27 - 2))
+    rainbowBtn.BackgroundColor3 = _v6n and Color3.fromRGB((66 - 31), (13 - 3), (15 - 5)) or Color3.fromRGB((50 - 25), (50 - 25), (49 - 24))
     rbs.Transparency = _v6n and 0.6 or 0.9
     rLbl.TextColor3 = _v6n and THEME.RED or THEME.TEXT_OFF
-    rDot.BackgroundColor3 = _v6n and Color3.fromRGB((466 - 211), (438 - 183), (435 - 180)) or Color3.fromRGB((124 - 54), (85 - 15), (85 - 15))
+    rDot.BackgroundColor3 = _v6n and Color3.fromRGB((262 - 7), (457 - 202), (413 - 158)) or Color3.fromRGB((140 - 70), (119 - 49), (88 - 18))
     rDotGrad.Enabled = _v6n
 end)
 
@@ -1806,7 +1806,7 @@ task.spawn(function()
 end)
 
 
-local N_BTN_H = (46 - 14)
+local N_BTN_H = (64 - 32)
 local N_GAP = (9 - 3)
 local N_PAD = (16 - 8)
 local N_SCROLL_TOP = N_BTN_H + N_GAP
@@ -1814,7 +1814,7 @@ local N_SCROLL_H_DEDUCT = N_SCROLL_TOP + N_PAD*(4 - 2)
 
 local notifPanel, notifScroll, notifScale
 local notifHistory = {}
-local MAX_NOTIFS = (299 - 99)
+local MAX_NOTIFS = (383 - 183)
 local notifConnections = {}
 local notifRenderConn
 local lastSyncAbsPos, lastSyncAbsSize, lastSyncScale
@@ -1822,7 +1822,7 @@ local globalToggle
 
 local function syncPanel()
     if not notifPanel or not notifPanel.Parent then return end
-    if main.AbsoluteSize.X < (65 - 25) or main.AbsoluteSize.Y < (60 - 30) then return end
+    if main.AbsoluteSize.X < (43 - 3) or main.AbsoluteSize.Y < (48 - 18) then return end
     local _v6q = uiscale.Scale
     local _v6r = main.AbsoluteSize
     if main.Position == lastSyncAbsPos and _v6r == lastSyncAbsSize and _v6q == lastSyncScale then return end
@@ -1830,8 +1830,8 @@ local function syncPanel()
     lastSyncAbsSize = _v6r
     lastSyncScale = _v6q
     if notifScale then notifScale.Scale = _v6q end
-    notifPanel.Position = UDim2.new(main.Position.X.Scale, main.Position.X.Offset + (513 - 103), main.Position.Y.Scale, main.Position.Y.Offset)
-    notifPanel.Size = UDim2.new(0, (327 - 137), 0, _v6r.Y / _v6q)
+    notifPanel.Position = UDim2.new(main.Position.X.Scale, main.Position.X.Offset + (635 - 225), main.Position.Y.Scale, main.Position.Y.Offset)
+    notifPanel.Size = UDim2.new(0, (323 - 133), 0, _v6r.Y / _v6q)
 end
 
 local function startPanelSync()
@@ -1848,34 +1848,34 @@ end
 
 local function humanTime(_v6s)
     local s = math.floor(_v6s)
-    if s < (101 - 41) then return _dyepe("uuuyw633WaDsssa127HNs94=") end
-    local _v6t = math.floor(s / (76 - 16))
-    if _v6t == 1 then return _dyepe("uuuyw633WaHHs+m06bDos90=") end
-    if _v6t == (3 - 1) then return _dyepe("uuuyw633WaHHs+m06bDos96q86Du") end
-    if _v6t <= (19 - 9) then return string.format(_dyepe("uuuyw633WVwMSrPCuuuyzKzVoPs="), _v6t) end
-    if _v6t < (105 - 45) then return string.format(_dyepe("uuuyw633WVwMSrPCuuuz4a3xodA="), _v6t) end
+    if s < (69 - 9) then return _dwrnz("sOui3qHpTKz+tty50bHdrtI=") end
+    local _v6t = math.floor(s / (64 - 4))
+    if _v6t == 1 then return _dwrnz("sOui3qHpTK3Vt/O447D4rtE=") end
+    if _v6t == (4 - 2) then return _dwrnz("sOui3qHpTK3Vt/O447D4rtK05qz8") end
+    if _v6t <= (14 - 4) then return string.format(_dwrnz("sOui3qHpTFAeTqnOsOui0aDLtfc="), _v6t) end
+    if _v6t < (100 - 40) then return string.format(_dwrnz("sOui3qHpTFAeTqnOsOuj/KHvtNw="), _v6t) end
     local _v6u = math.floor(_v6t / (88 - 28))
-    if _v6u == 1 then return _dyepe("uuuyw633WaHbssy12rHD") end
-    if _v6u == (4 - 2) then return _dyepe("uuuyw633WaHbssy12rHAsv6q/w==") end
-    if _v6u <= (11 - 1) then return string.format(_dyepe("uuuyw633WVwMSrPeu86y0qzUodM="), _v6u) end
-    if _v6u < (41 - 17) then return string.format(_dyepe("uuuyw633WVwMSrPeu86y0qza"), _v6u) end
-    local d = math.floor(_v6u / (36 - 12))
-    if d == 1 then return _dyepe("uuuyw633WaDis+O05g==") end
-    if d == (4 - 2) then return _dyepe("uuuyw633WaDis+O05rDgsvI=") end
-    if d <= (19 - 9) then return string.format(_dyepe("uuuyw633WVwMSrPOuuOyzK32"), d) end
-    return string.format(_dyepe("uuuyw633WVwMSrLnuuGz7g=="), d)
+    if _v6u == 1 then return _dwrnz("sOui3qHpTK3Jtta50LHT") end
+    if _v6u == (3 - 1) then return _dwrnz("sOui3qHpTK3Jtta50LHQr/K06g==") end
+    if _v6u <= (12 - 2) then return string.format(_dwrnz("sOui3qHpTFAeTqnSsc6iz6DKtN8="), _v6u) end
+    if _v6u < (48 - 24) then return string.format(_dwrnz("sOui3qHpTFAeTqnSsc6iz6DE"), _v6u) end
+    local d = math.floor(_v6u / (32 - 8))
+    if d == 1 then return _dwrnz("sOui3qHpTKzwt/m47A==") end
+    if d == (3 - 1) then return _dwrnz("sOui3qHpTKzwt/m47LDwr/4=") end
+    if d <= (19 - 9) then return string.format(_dwrnz("sOui3qHpTFAeTqnCsOOi0aHo"), d) end
+    return string.format(_dwrnz("sOui3qHpTFAeTqjrsOGj8w=="), d)
 end
 
 local function findLongestString(_v6v, _v6w)
-    if _v6w > (9 - 4) then return nil end
-    if type(_v6v) == _dyepe("EB0YAhoU") then return _v6v end
-    if type(_v6v) ~= _dyepe("FwgIBxE=") then return nil end
+    if _v6w > (7 - 2) then return nil end
+    if type(_v6v) == _dwrnz("Gh0IHxYK") then return _v6v end
+    if type(_v6v) ~= _dwrnz("HQgYGh0=") then return nil end
     local _v6x = nil
     for _, _v6y in pairs(_v6v) do
         local s
-        if type(_v6y) == _dyepe("EB0YAhoU") then s = _v6y
-        elseif type(_v6y) == _dyepe("FwgIBxE=") then s = findLongestString(_v6y, _v6w + 1) end
-        if type(s) == _dyepe("EB0YAhoU") and #s > 0 then
+        if type(_v6y) == _dwrnz("Gh0IHxYK") then s = _v6y
+        elseif type(_v6y) == _dwrnz("HQgYGh0=") then s = findLongestString(_v6y, _v6w + 1) end
+        if type(s) == _dwrnz("Gh0IHxYK") and #s > 0 then
             if not _v6x or #s > #_v6x then _v6x = s end
         end
     end
@@ -1883,57 +1883,57 @@ local function findLongestString(_v6v, _v6w)
 end
 
 local function extractNotifyText(_v6z)
-    if _v6z == nil then return _dyepe("OAcDByk=") end
-    if type(_v6z) == _dyepe("EB0YAhoU") then return _v6z end
-    if type(_v6z) == _dyepe("DRwHCREB") or type(_v6z) == _dyepe("AQYFBxESFw==") then return tostring(_v6z) end
-    if type(_v6z) == _dyepe("ARwMDREB") then
+    if _v6z == nil then return _dwrnz("MgcTGiU=") end
+    if type(_v6z) == _dwrnz("Gh0IHxYK") then return _v6z end
+    if type(_v6z) == _dwrnz("BxwXFB0f") or type(_v6z) == _dwrnz("CwYVGh0MAg==") then return tostring(_v6z) end
+    if type(_v6z) == _dwrnz("CxwcEB0f") then
         local _v70, _v71 = pcall(function() return buffer.len(_v6z) end)
-        return string.format(_dyepe("OAsfDRIWC1lNDksPGh0PGCk="), _v70 and _v71 or 0)
+        return string.format(_dwrnz("MgsPEB4IHlVfClEDEB0fBSU="), _v70 and _v71 or 0)
     end
-    if type(_v6z) == _dyepe("FwgIBxE=") then
+    if type(_v6z) == _dwrnz("HQgYGh0=") then
         local _v72 = {
-            _dyepe("DgwZGBUUHA=="), _dyepe("FwwSHw=="), _dyepe("DhoN"), _dyepe("AAYEHxEdDQ=="), _dyepe("AQYOEg=="), _dyepe("BwwZCA=="), _dyepe("DQYeAhIaGhgcAwQD"),
-            _dyepe("LgwZGBUUHA=="), _dyepe("NwwSHw=="), _dyepe("LhoN"), _dyepe("IAYEHxEdDQ=="), _dyepe("IQYOEg=="), _dyepe("JwwZCA=="), _dyepe("LQYeAhIaGhgcAwQD"),
+            _dwrnz("BAwJBRkKCQ=="), _dwrnz("HQwCAg=="), _dwrnz("BBod"), _dwrnz("CgYUAh0DGA=="), _dwrnz("CwYeDw=="), _dwrnz("DQwJFQ=="), _dwrnz("BwYOHx4EDxQOBx4P"),
+            _dwrnz("JAwJBRkKCQ=="), _dwrnz("PQwCAg=="), _dwrnz("JBod"), _dwrnz("KgYUAh0DGA=="), _dwrnz("KwYeDw=="), _dwrnz("LQwJFQ=="), _dwrnz("JwYOHx4EDxQOBx4P"),
         }
         for _, k in ipairs(_v72) do
             local _v73 = _v6z[k]
-            if type(_v73) == _dyepe("EB0YAhoU") and #_v73 > 0 then return _v73 end
+            if type(_v73) == _dwrnz("Gh0IHxYK") and #_v73 > 0 then return _v73 end
         end
-        if type(_v6z[1]) == _dyepe("EB0YAhoU") then return _v6z[1] end
+        if type(_v6z[1]) == _dwrnz("Gh0IHxYK") then return _v6z[1] end
         local _v74 = findLongestString(_v6z, 0)
         if _v74 then return _v74 end
         local _v70, _v75 = pcall(function() return HttpService:JSONEncode(_v6z) end)
-        if _v70 and type(_v75) == _dyepe("EB0YAhoU") then return _v75 end
-        return _dyepe("OLHGs9uq8aDsSrPXuuOy2lSq/KDqstq067HLNg==")
+        if _v70 and type(_v75) == _dwrnz("Gh0IHxYK") then return _v75 end
+        return _dwrnz("MrHWrte05Kz+TqnbsOOix1i06az4tsC44bHbKw==")
     end
     return tostring(_v6z)
 end
 
 local function createNotifLabel(_v76)
-    local _v77 = Instance.new(_dyepe("NwwSHzgSGxwE"))
+    local _v77 = Instance.new(_dwrnz("PQwCAjQMDhAW"))
     _v77.Size = UDim2.new(1, 0, 0, 0)
     _v77.AutomaticSize = Enum.AutomaticSize.Y
-    _v77.BackgroundColor3 = Color3.fromRGB((30 - 10), (39 - 19), (30 - 10))
+    _v77.BackgroundColor3 = Color3.fromRGB((37 - 17), (24 - 4), (25 - 5))
     _v77.BackgroundTransparency = 0.3
     _v77.BorderSizePixel = 0
     _v77.Font = Enum.Font.Gotham
-    _v77.TextSize = (28 - 14)
+    _v77.TextSize = (26 - 12)
     _v77.TextColor3 = THEME.NOTIF_GRAY
     _v77.TextXAlignment = Enum.TextXAlignment.Right
     _v77.TextYAlignment = Enum.TextYAlignment.Top
     _v77.TextWrapped = true
     _v77.RichText = false
-    _v77.Text = string.format(_dyepe("OEwZNn5WCg=="), humanTime(tick() - _v76.timestamp), _v76.message)
+    _v77.Text = string.format(_dwrnz("MkwJK3JIHw=="), humanTime(tick() - _v76.timestamp), _v76.message)
 
-    local _v78 = Instance.new(_dyepe("NiA6ChAXEBcP"))
-    _v78.PaddingTop = UDim.new(0, (9 - 3))
-    _v78.PaddingBottom = UDim.new(0, (12 - 6))
-    _v78.PaddingLeft = UDim.new(0, (10 - 2))
+    local _v78 = Instance.new(_dwrnz("PCAqFxwJBRsd"))
+    _v78.PaddingTop = UDim.new(0, (7 - 1))
+    _v78.PaddingBottom = UDim.new(0, (8 - 2))
+    _v78.PaddingLeft = UDim.new(0, (11 - 3))
     _v78.PaddingRight = UDim.new(0, (15 - 7))
     _v78.Parent = _v77
 
-    local _v79 = Instance.new(_dyepe("NiApBAYdHAs="))
-    _v79.CornerRadius = UDim.new(0, (10 - 4))
+    local _v79 = Instance.new(_dwrnz("PCA5GQoDCQc="))
+    _v79.CornerRadius = UDim.new(0, (12 - 6))
     _v79.Parent = _v77
 
     _v77.Parent = notifScroll
@@ -1975,61 +1975,61 @@ end
 local function createNotifPanel()
     if notifPanel and notifPanel.Parent then return end
 
-    notifPanel = Instance.new(_dyepe("JRsLBhE="))
-    notifPanel.Name = _dyepe("LQYeAhIjGBcNBg==")
-    notifPanel.Size = UDim2.new(0, (193 - 3), 0, (499 - 99))
+    notifPanel = Instance.new(_dwrnz("LxsbGx0="))
+    notifPanel.Name = _dwrnz("JwYOHx49DRsfAg==")
+    notifPanel.Size = UDim2.new(0, (301 - 111), 0, (487 - 87))
     notifPanel.BackgroundColor3 = THEME.BG
     notifPanel.BackgroundTransparency = 0.05
     notifPanel.BorderSizePixel = 0
     notifPanel.Parent = gui
     notifPanel.ClipsDescendants = true
 
-    local _v7m = Instance.new(_dyepe("NiAtGRUXEBwGHg=="))
+    local _v7m = Instance.new(_dwrnz("PCA9BBkJBRAUGg=="))
     _v7m.Color = ColorSequence.new({
         ColorSequenceKeypoint.new(0, THEME.BG_TOP),
         ColorSequenceKeypoint.new(1, THEME.BG),
     })
-    _v7m.Rotation = (155 - 65)
+    _v7m.Rotation = (97 - 7)
     _v7m.Parent = notifPanel
 
-    local _v7n = Instance.new(_dyepe("NiA5HwYcEhw="))
+    local _v7n = Instance.new(_dwrnz("PCApAgoCBxA="))
     _v7n.Color = THEME.GREEN
     _v7n.Thickness = 1
     _v7n.Transparency = 0.7
     _v7n.Parent = notifPanel
 
-    local _v7o = Instance.new(_dyepe("NiApBAYdHAs="))
-    _v7o.CornerRadius = UDim.new(0, (9 - 1))
+    local _v7o = Instance.new(_dwrnz("PCA5GQoDCQc="))
+    _v7o.CornerRadius = UDim.new(0, (14 - 6))
     _v7o.Parent = notifPanel
 
-    local _v7p = Instance.new(_dyepe("NiA6ChAXEBcP"))
+    local _v7p = Instance.new(_dwrnz("PCAqFxwJBRsd"))
     _v7p.PaddingTop = UDim.new(0, N_PAD)
     _v7p.PaddingBottom = UDim.new(0, N_PAD)
     _v7p.PaddingLeft = UDim.new(0, N_PAD)
     _v7p.PaddingRight = UDim.new(0, N_PAD)
     _v7p.Parent = notifPanel
 
-    notifScale = Instance.new(_dyepe("NiA5CBUfHA=="))
+    notifScale = Instance.new(_dwrnz("PCApFRkBCQ=="))
     notifScale.Scale = uiscale.Scale
     notifScale.Parent = notifPanel
 
-    local _v7q = Instance.new(_dyepe("NwwSHzYGDQ0HBA=="))
-    _v7q.Size = UDim2.new(0.5, -(4 - 1), 0, N_BTN_H)
+    local _v7q = Instance.new(_dwrnz("PQwCAjoYGAEVAA=="))
+    _v7q.Size = UDim2.new(0.5, -(5 - 2), 0, N_BTN_H)
     _v7q.Position = UDim2.new(0, 0, 0, 0)
-    _v7q.BackgroundColor3 = Color3.fromRGB((123 - 43), (24 - 4), (39 - 19))
+    _v7q.BackgroundColor3 = Color3.fromRGB((139 - 59), (37 - 17), (34 - 14))
     _v7q.BorderSizePixel = 0
     _v7q.Font = Enum.Font.GothamBold
-    _v7q.TextSize = (15 - 2)
+    _v7q.TextSize = (21 - 8)
     _v7q.TextColor3 = THEME.RED
-    _v7q.Text = _dyepe("u86y0a33od6x6A==")
+    _v7q.Text = _dwrnz("sc6izKHptNKj7A==")
     _v7q.AutoButtonColor = true
     _v7q.Parent = notifPanel
 
-    local _v7r = Instance.new(_dyepe("NiApBAYdHAs="))
-    _v7r.CornerRadius = UDim.new(0, (10 - 4))
+    local _v7r = Instance.new(_dwrnz("PCA5GQoDCQc="))
+    _v7r.CornerRadius = UDim.new(0, (9 - 3))
     _v7r.Parent = _v7q
 
-    local _v7s = Instance.new(_dyepe("NiA5HwYcEhw="))
+    local _v7s = Instance.new(_dwrnz("PCApAgoCBxA="))
     _v7s.Color = THEME.RED
     _v7s.Thickness = 1
     _v7s.Transparency = 0.5
@@ -2037,20 +2037,20 @@ local function createNotifPanel()
 
     _v7q.Activated:Connect(destroyNotifPanel)
 
-    local _v7t = Instance.new(_dyepe("NwwSHzYGDQ0HBA=="))
-    _v7t.Size = UDim2.new(0.5, -(5 - 2), 0, N_BTN_H)
+    local _v7t = Instance.new(_dwrnz("PQwCAjoYGAEVAA=="))
+    _v7t.Size = UDim2.new(0.5, -(4 - 1), 0, N_BTN_H)
     _v7t.Position = UDim2.new(0.5, (4 - 1), 0, 0)
     _v7t.BackgroundColor3 = THEME.WHITE
     _v7t.BorderSizePixel = 0
     _v7t.Font = Enum.Font.GothamBold
-    _v7t.TextSize = (19 - 6)
+    _v7t.TextSize = (20 - 7)
     _v7t.TextColor3 = THEME.DARK_TEXT
-    _v7t.Text = _dyepe("u8Oz7azLoPOx6w==")
+    _v7t.Text = _dwrnz("scOj8KDVtf+j7w==")
     _v7t.AutoButtonColor = false
     _v7t.Parent = notifPanel
 
-    local _v7u = Instance.new(_dyepe("NiApBAYdHAs="))
-    _v7u.CornerRadius = UDim.new(0, (8 - 2))
+    local _v7u = Instance.new(_dwrnz("PCA5GQoDCQc="))
+    _v7u.CornerRadius = UDim.new(0, (10 - 4))
     _v7u.Parent = _v7t
 
     _v7t.Activated:Connect(function()
@@ -2062,7 +2062,7 @@ local function createNotifPanel()
         if notifScroll then notifScroll.CanvasPosition = Vector2.new(0, 0) end
     end)
 
-    notifScroll = Instance.new(_dyepe("MAoYBBgfEBcPLBkMDgw="))
+    notifScroll = Instance.new(_dwrnz("OgoIGRQBBRsdKAMABAw="))
     notifScroll.Size = UDim2.new(1, 0, 1, -N_SCROLL_H_DEDUCT)
     notifScroll.Position = UDim2.new(0, 0, 0, N_SCROLL_TOP)
     notifScroll.CanvasSize = UDim2.new(0, 0, 0, 0)
@@ -2070,27 +2070,27 @@ local function createNotifPanel()
     notifScroll.ScrollBarThickness = (7 - 2)
     notifScroll.ScrollBarImageColor3 = THEME.GREEN
     notifScroll.ScrollBarImageTransparency = 0.2
-    notifScroll.BackgroundColor3 = Color3.fromRGB((15 - 5), (11 - 1), (13 - 3))
+    notifScroll.BackgroundColor3 = Color3.fromRGB((16 - 6), (11 - 1), (17 - 7))
     notifScroll.BackgroundTransparency = 0.4
     notifScroll.BorderSizePixel = 0
     notifScroll.ClipsDescendants = true
     notifScroll.Active = true
     notifScroll.Parent = notifPanel
 
-    local _v7w = Instance.new(_dyepe("NiApBAYdHAs="))
-    _v7w.CornerRadius = UDim.new(0, (11 - 5))
+    local _v7w = Instance.new(_dwrnz("PCA5GQoDCQc="))
+    _v7w.CornerRadius = UDim.new(0, (9 - 3))
     _v7w.Parent = notifScroll
 
-    local _v7x = Instance.new(_dyepe("NiAmAgcHNRgRBR4Z"))
+    local _v7x = Instance.new(_dwrnz("PCA2HwsZIBQDAQQV"))
     _v7x.SortOrder = Enum.SortOrder.LayoutOrder
-    _v7x.Padding = UDim.new(0, (7 - 3))
+    _v7x.Padding = UDim.new(0, (5 - 1))
     _v7x.Parent = notifScroll
 
-    local _v7y = Instance.new(_dyepe("NiA6ChAXEBcP"))
-    _v7y.PaddingTop = UDim.new(0, (7 - 3))
-    _v7y.PaddingBottom = UDim.new(0, (6 - 2))
-    _v7y.PaddingLeft = UDim.new(0, (5 - 1))
-    _v7y.PaddingRight = UDim.new(0, (7 - 3))
+    local _v7y = Instance.new(_dwrnz("PCAqFxwJBRsd"))
+    _v7y.PaddingTop = UDim.new(0, (5 - 1))
+    _v7y.PaddingBottom = UDim.new(0, (7 - 3))
+    _v7y.PaddingLeft = UDim.new(0, (7 - 3))
+    _v7y.PaddingRight = UDim.new(0, (6 - 2))
     _v7y.Parent = notifScroll
 
     syncPanel()
@@ -2105,7 +2105,7 @@ end
 local lastNotifMsg = nil
 local lastNotifTime = 0
 local function addNotification(message)
-    if not message or message == "" then message = _dyepe("OLDrs9OryKHSNw==") end
+    if not message or message == "" then message = _dwrnz("MrD7rt+13a3AMw==") end
     local _v80 = tostring(message)
     local _v81 = tick()
     if lastNotifMsg == _v80 and (_v81 - lastNotifTime) < 0.15 then return end
@@ -2131,24 +2131,24 @@ local hookedSet = {}
 local function tryHookOne(_v84)
     if hookedSet[_v84] then return false end
     local _v85 = false
-    if _v84:IsA(_dyepe("MQwHBAAWPA8NBB8=")) then
+    if _v84:IsA(_dwrnz("OwwXGQwIKQMfAAU=")) then
         pcall(function()
             local _v89 = _v84.OnClientEvent:Connect(function(...)
                 local _v8c = { ... }
-                if _v8c[1] == _dyepe("LQYeAhIK") or _v8c[(4 - 2)] == _dyepe("LQYeAhIK") then
-                    local _v8d = (_v8c[1] == _dyepe("LQYeAhIK")) and _v8c[(4 - 2)] or _v8c[1]
+                if _v8c[1] == _dwrnz("JwYOHx4U") or _v8c[(4 - 2)] == _dwrnz("JwYOHx4U") then
+                    local _v8d = (_v8c[1] == _dwrnz("JwYOHx4U")) and _v8c[(4 - 2)] or _v8c[1]
                     addNotification(extractNotifyText(_v8d))
                 end
             end)
             table.insert(notifConnections, _v89)
             _v85 = true
         end)
-    elseif _v84:IsA(_dyepe("IQAEDxURFRwtHA4DFw==")) then
+    elseif _v84:IsA(_dwrnz("KwAUEhkPABA/GBQPHQ==")) then
         pcall(function()
             local _v8e = _v84.Event:Connect(function(...)
                 local _v8h = { ... }
-                if _v8h[1] == _dyepe("LQYeAhIK") or _v8h[(3 - 1)] == _dyepe("LQYeAhIK") then
-                    local _v8i = (_v8h[1] == _dyepe("LQYeAhIK")) and _v8h[(4 - 2)] or _v8h[1]
+                if _v8h[1] == _dwrnz("JwYOHx4U") or _v8h[(3 - 1)] == _dwrnz("JwYOHx4U") then
+                    local _v8i = (_v8h[1] == _dwrnz("JwYOHx4U")) and _v8h[(4 - 2)] or _v8h[1]
                     addNotification(extractNotifyText(_v8i))
                 end
             end)
@@ -2161,7 +2161,7 @@ local function tryHookOne(_v84)
 end
 
 for _, inst in ipairs(Dhab:GetDescendants()) do
-    if inst:IsA(_dyepe("MQwHBAAWPA8NBB8=")) or inst:IsA(_dyepe("IQAEDxURFRwtHA4DFw==")) then
+    if inst:IsA(_dwrnz("OwwXGQwIKQMfAAU=")) or inst:IsA(_dwrnz("KwAUEhkPABA/GBQPHQ==")) then
         tryHookOne(inst)
     end
 end
@@ -2169,7 +2169,7 @@ end
 pcall(function()
     local _v8j
     _v8j = Dhab.DescendantAdded:Connect(function(_v8k)
-        if _v8k:IsA(_dyepe("MQwHBAAWPA8NBB8=")) or _v8k:IsA(_dyepe("IQAEDxURFRwtHA4DFw==")) then
+        if _v8k:IsA(_dwrnz("OwwXGQwIKQMfAAU=")) or _v8k:IsA(_dwrnz("KwAUEhkPABA/GBQPHQ==")) then
             tryHookOne(_v8k)
         end
     end)
@@ -2178,11 +2178,11 @@ end)
 
 task.spawn(function()
     while state.running do
-        task.wait((22 - 7))
+        task.wait((29 - 14))
         if notifPanel and notifPanel.Parent then
             for _, _v8l in ipairs(notifHistory) do
                 if _v8l.label and _v8l.label.Parent then
-                    _v8l.label.Text = string.format(_dyepe("OEwZNn5WCg=="), humanTime(tick() - _v8l.timestamp), _v8l.message)
+                    _v8l.label.Text = string.format(_dwrnz("MkwJK3JIHw=="), humanTime(tick() - _v8l.timestamp), _v8l.message)
                 end
             end
         end
@@ -2226,26 +2226,26 @@ if hasKeyboard then
 end
 
 if hasTouch then
-    local floatBtn = Instance.new(_dyepe("NwwSHzYGDQ0HBA=="))
-    floatBtn.Name = _dyepe("JQUFCgAnFh4PBg4=")
-    floatBtn.Size = UDim2.new(0, (83 - 31), 0, (66 - 14))
-    floatBtn.Position = UDim2.new(0, (17 - 7), 0.5, -(51 - 25))
+    local floatBtn = Instance.new(_dwrnz("PQwCAjoYGAEVAA=="))
+    floatBtn.Name = _dwrnz("LwUVFww5AxIdAhQ=")
+    floatBtn.Size = UDim2.new(0, (74 - 22), 0, (90 - 38))
+    floatBtn.Position = UDim2.new(0, (11 - 1), 0.5, -(49 - 23))
     floatBtn.BackgroundColor3 = THEME.PURE_BLACK
     floatBtn.BackgroundTransparency = 0
     floatBtn.BorderSizePixel = 0
     floatBtn.Font = Enum.Font.GothamBold
-    floatBtn.TextSize = (18 - 5)
+    floatBtn.TextSize = (22 - 9)
     floatBtn.TextColor3 = THEME.GREEN
-    floatBtn.Text = _dyepe("Ozos")
+    floatBtn.Text = _dwrnz("MTo8")
     floatBtn.AutoButtonColor = false
     floatBtn.Active = true
     floatBtn.Parent = gui
 
-    local fc = Instance.new(_dyepe("NiApBAYdHAs="))
+    local fc = Instance.new(_dwrnz("PCA5GQoDCQc="))
     fc.CornerRadius = UDim.new(1, 0)
     fc.Parent = floatBtn
 
-    local fs = Instance.new(_dyepe("NiA5HwYcEhw="))
+    local fs = Instance.new(_dwrnz("PCApAgoCBxA="))
     fs.Color = THEME.GREEN
     fs.Thickness = 1
     fs.Transparency = 0.35
@@ -2253,7 +2253,7 @@ if hasTouch then
 
     local floatDrag, floatStart, floatStartPos = false, nil, nil
     local moved = false
-    local DRAG_THRESHOLD = (10 - 4)
+    local DRAG_THRESHOLD = (9 - 3)
 
     floatBtn.InputBegan:Connect(function(_v8t)
         if _v8t.UserInputType == Enum.UserInputType.MouseButton1 or _v8t.UserInputType == Enum.UserInputType.Touch then
@@ -2329,20 +2329,20 @@ _G.xk_stop = function()
     vehicleFarmStop()
 end
 _G.xk_stats = function()
-    return string.format(_dyepe("ODE5LSlTHxAaDw9QRg1KAB0fFQpVTw9NDQYMBBNOXApIHA0MEQRXTgc="),
+    return string.format(_dwrnz("MjEpMCVNChwICxVcTA1aHREBAAZHSxVBBwYcGR9QSQZaGBcAGwRHUws="),
         state.fired, state.kills, tostring(state.nofogOn), tostring(vehicleFarm.active))
 end
 _G.xk_last_fire = function()
-    return string.format(_dyepe("ODE5LVk1MCstN0seFwgeHgdOXApIFkseDBwYCBFOXApIFksZAhsNDgBOXApIFksLChsPD0lWHVkUSgAEDwUZVlEXWQVIDAIfBiYEVlEA"),
+    return string.format(_dwrnz("MjEpMFUrJSc/M1ESHQgOAwtQSQZaElESBhwIFR1QSQZaElEVCBsdEwxQSQZaElEHABsfEkVICFUGThoIBQUJS10JTAlaCBgTDCYUS10e"),
         state.lastFireStatus, state.lastFireSource, state.lastFireTargetName,
         state.fired, state.kills, tostring(state.fireOn))
 end
 _G.xk_reset_warning = function()
     _G.xsf_warning_shown = false
-    notify(_dyepe("u8Oz7lSr3KHRssy1zLHDS6zZocCx4LLnuu9Ks9Oq/aHCssa107Dgs8VTm/n8SrPeuuOy0630ochIstK05bHFS6zUoP2w3LPXu95Ks9Oq/aDqssy1zLDv"))
+    notify(_dwrnz("scOj81i1ya3Dtta5xrHTVqDHtMyj5KjrsO9art+06K3Qtty52bDwrslNjvXuTqnSsOOizqHqtMRatsi477HVVqDKtfGi2Knbsd5art+06Kz4tta5xrD/"))
 end
 _G.xk_config = function(_v8y)
-    if type(_v8y)==_dyepe("FwgIBxE=") then
+    if type(_v8y)==_dwrnz("HQgYGh0=") then
         for k,_v8z in pairs(_v8y) do if CFG[k]~=nil then CFG[k]=_v8z end end
     end
 end
